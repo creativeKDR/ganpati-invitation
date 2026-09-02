@@ -2395,12 +2395,19 @@
             }
         }
 
-        // Populate Images
+        // Populate Images (with safe null checks)
         if (config.images) {
-            if (config.images.ganeshIdol) document.getElementById('ganeshImg').src = config.images.ganeshIdol;
-            if (config.images.familyPhoto) document.getElementById('familyImg').src = config.images.familyPhoto;
-            if (config.images.poojaThali) document.getElementById('poojaImg').src = config.images.poojaThali;
-            if (config.images.modakPhoto) document.getElementById('modakImg').src = config.images.modakPhoto;
+            const ganeshEl = document.getElementById('ganeshImg');
+            if (ganeshEl && config.images.ganeshIdol) ganeshEl.src = config.images.ganeshIdol;
+
+            const familyEl = document.getElementById('familyImg');
+            if (familyEl && config.images.familyPhoto) familyEl.src = config.images.familyPhoto;
+
+            const poojaEl = document.getElementById('poojaImg');
+            if (poojaEl && config.images.poojaThali) poojaEl.src = config.images.poojaThali;
+
+            const modakEl = document.getElementById('modakImg');
+            if (modakEl && config.images.modakPhoto) modakEl.src = config.images.modakPhoto;
         }
 
         // Populate Footer
