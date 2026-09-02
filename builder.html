@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 गणपती निमंत्रण पत्रिका - Visual Template Builder</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-panel: #1e293b;
+            --bg-input: #0f172a;
+            --border-color: #334155;
+            --primary: #f59e0b;
+            --primary-hover: #d97706;
+            --accent: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Mukta', 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background: #111827;
+            padding: 14px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+        }
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-title h1 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .header-title span {
+            font-size: 0.85rem;
+            background: #374151;
+            color: #d1d5db;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: #334155;
+            color: #fff;
+        }
+        .btn-secondary:hover {
+            background: #475569;
+        }
+
+        /* MAIN LAYOUT (SPLIT VIEW) */
+        .main-container {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 65px);
+            overflow: hidden;
+        }
+
+        /* LEFT PANEL: CONTROLS & FORM */
+        .controls-panel {
+            width: 480px;
+            background: var(--bg-panel);
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .section-card {
+            background: #182234;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 10px;
+        }
+
+        /* FORM ELEMENTS */
+        .form-group {
+            margin-bottom: 14px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+        label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="tel"], textarea, select {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s ease;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 65px;
+        }
+
+        /* THEME SELECTOR CARDS */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .theme-card {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            background: #0f172a;
+        }
+        .theme-card:hover {
+            border-color: #64748b;
+        }
+        .theme-card.active {
+            border-color: var(--primary);
+            background: rgba(245, 158, 11, 0.1);
+        }
+        .theme-preview-color {
+            height: 28px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .theme-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /* RIGHT PANEL: LIVE PREVIEW */
+        .preview-panel {
+            flex: 1;
+            background: #0b0f19;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .preview-toolbar {
+            display: flex;
+            gap: 8px;
+            background: #1e293b;
+            padding: 6px 12px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .btn-device {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-device.active {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .preview-frame-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .preview-frame-container.mobile {
+            max-width: 410px;
+            height: 840px;
+            max-height: 90%;
+            border: 10px solid #1e293b;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+        .preview-frame-container.desktop {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #000;
+        }
+
+        /* TOAST NOTIFICATION */
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #10b981;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-title">
+            <h1>🌸 Ganpati Invitation Builder</h1>
+            <span>Live Template Customizer</span>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn-action btn-secondary" onclick="copyConfigCode()">
+                📋 Copy config.js
+            </button>
+            <button class="btn-action btn-primary" onclick="downloadConfigFile()">
+                💾 Download config.js
+            </button>
+            <button class="btn-action btn-secondary" onclick="openNewTabPreview()">
+                🚀 Open Live Page
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN INTERACTIVE CONTAINER -->
+    <div class="main-container">
+        
+        <!-- LEFT: CONTROLS & FORM -->
+        <div class="controls-panel">
+
+            <!-- 1. THEME SELECTION -->
+            <div class="section-card">
+                <div class="section-header">🎨 १. थीम निवडा (Select Theme)</div>
+                <div class="theme-grid">
+                    <div class="theme-card active" onclick="selectTheme('banana-leaf', this)">
+                        <div class="theme-preview-color" style="background: linear-gradient(90deg, #1b4d24, #286e35, #ffd700);"></div>
+                        <div class="theme-title">🌿 Banana Leaf</div>
+                        <small style="color: var(--text-muted);">केळीचे पान व सोनेरी</small>
+                    </div>
+
+                    <div class="theme-card" onclick="selectTheme('royal-maroon', this)">
+                        <div class="theme-preview-color" style="background: linear-gradient(90deg, #420808, #6e1010, #ffd700);"></div>
+                        <div class="theme-title">👑 Royal Maroon</div>
+                        <small style="color: var(--text-muted);">राजेशाही मरून</small>
+                    </div>
+
+                    <div class="theme-card" onclick="selectTheme('sunset-saffron', this)">
+                        <div class="theme-preview-color" style="background: linear-gradient(90deg, #e65100, #ff8f00, #ffd700);"></div>
+                        <div class="theme-title">🪔 Sunset Saffron</div>
+                        <small style="color: var(--text-muted);">पावन भगवा / केसरी</small>
+                    </div>
+
+                    <div class="theme-card" onclick="selectTheme('temple-ivory', this)">
+                        <div class="theme-preview-color" style="background: linear-gradient(90deg, #f7f1e1, #ffffff, #b3821a);"></div>
+                        <div class="theme-title">🛕 Temple Ivory</div>
+                        <small style="color: var(--text-muted);">पवित्र रेशमी श्वेत</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. FAMILY & HOST -->
+            <div class="section-card">
+                <div class="section-header">👨‍👩‍👧‍👦 २. यजमान व परिवार (Family Details)</div>
+                <div class="form-group">
+                    <label>परिवार नाव (Family Name):</label>
+                    <input type="text" id="inpFamilyName" value="राऊत परिवार" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>निमंत्रक नाव (Host / Nimantrak):</label>
+                    <input type="text" id="inpHostName" value="निमंत्रक: श्री. कल्पेश राऊत" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>बॅज मजकूर (Badge Tag):</label>
+                    <input type="text" id="inpFamilyBadge" value="✨ राऊत परिवार ✨" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>उपस्थिती स्वागत संदेश (Welcome Subtext):</label>
+                    <input type="text" id="inpFamilySubtext" value="आणि समस्त राऊत परिवार आपले सहर्ष स्वागत करीत आहे." oninput="updateLive()">
+                </div>
+            </div>
+
+            <!-- 3. DATES & SCHEDULE -->
+            <div class="section-card">
+                <div class="section-header">📅 ३. सण व वेळापत्रक (Utsav Schedule)</div>
+                <div class="form-group">
+                    <label>श्रीगणेश स्थापना तारीख व वेळ:</label>
+                    <input type="text" id="inpSthapanaTime" value="सोमवार, १४ सप्टेंबर २०२६ | सकाळी ९:०० वाजता" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>दैनिक महाआरती वेळ:</label>
+                    <input type="text" id="inpAartiTime" value="दररोज संध्याकाळी ७:३० वाजता" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>उत्तरपूजा व विसर्जन मिरवणूक तारीख व वेळ:</label>
+                    <input type="text" id="inpVisarjanTime" value="शनिवार, १९ सप्टेंबर २०२६ | दुपारी ४:०० वाजता" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>काउंटडाऊन तारीख (Countdown Date - English format):</label>
+                    <input type="text" id="inpCountdownDate" value="September 14, 2026 09:00:00" oninput="updateLive()">
+                </div>
+            </div>
+
+            <!-- 4. SATYANARAYAN POOJA -->
+            <div class="section-card">
+                <div class="section-header">🪔 ४. श्री सत्यनारायण महापूजा</div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="chkShowPooja" checked onchange="updateLive()"> विशेष महापूजा दाखवा (Show Pooja Section)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>पूजेचा दिनांक:</label>
+                    <input type="text" id="inpPoojaDate" value="१८ सप्टेंबर २०२६ (शुक्रवार)" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>पूजेची वेळ:</label>
+                    <input type="text" id="inpPoojaTime" value="सकाळी १०:०० वाजता (पूजा प्रारंभ)" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>महाप्रसाद वेळ:</label>
+                    <input type="text" id="inpPoojaPrasad" value="दुपारी १:०० ते ३:३० वाजेपर्यंत" oninput="updateLive()">
+                </div>
+            </div>
+
+            <!-- 5. VENUE & CONTACT -->
+            <div class="section-card">
+                <div class="section-header">📍 ५. पत्ता व स्थळ (Venue & Location)</div>
+                <div class="form-group">
+                    <label>पत्ता ओळ १ (Address Line 1):</label>
+                    <input type="text" id="inpAddr1" value="२०२, स्नेहकुंज अपार्टमेंट," oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>पत्ता ओळ २ (Address Line 2):</label>
+                    <input type="text" id="inpAddr2" value="रेवदंडा - अलिबाग," oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>पत्ता ओळ ३ (City/Dist):</label>
+                    <input type="text" id="inpAddr3" value="जि. रायगड" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>गुगल मॅप शोध नाव (Maps Location Search Query):</label>
+                    <input type="text" id="inpMapsQuery" value="Snehkunj Apartment Revdanda Alibag" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>संपर्क फोन नंबर (Host Phone):</label>
+                    <input type="tel" id="inpPhone" value="+919876543210" oninput="updateLive()">
+                </div>
+            </div>
+
+            <!-- 6. PHOTOS & ASSETS -->
+            <div class="section-card">
+                <div class="section-header">🖼️ ६. फोटो फाईल्स (Photo File Names)</div>
+                <div class="form-group">
+                    <label>गणपती मूर्ती फोटो फाईल:</label>
+                    <input type="text" id="inpImgGanesh" value="ganesh.jpg" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>कुटुंब / फॅमिली फोटो फाईल:</label>
+                    <input type="text" id="inpImgFamily" value="family.jpg" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>सत्यनारायण पूजा थाळी फोटो:</label>
+                    <input type="text" id="inpImgPooja" value="pooja.jpg" oninput="updateLive()">
+                </div>
+                <div class="form-group">
+                    <label>मोदक फोटो फाईल:</label>
+                    <input type="text" id="inpImgModak" value="modak.jpg" oninput="updateLive()">
+                </div>
+            </div>
+
+            <!-- 7. AARTI AUDIO & MUSIC -->
+            <div class="section-card">
+                <div class="section-header">🎵 ७. आरती व संगीत (Aarti & Music)</div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="chkEnableMusic" checked onchange="updateLive()"> आरती व पार्श्वसंगीत चालू ठेवा (Enable Music)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>आरती ऑडिओ फाईल किंवा URL:</label>
+                    <input type="text" id="inpAudioFile" value="aarti.mp3" oninput="updateLive()" placeholder="उदा. aarti.mp3 किंवा https://...">
+                    <small style="color: var(--text-muted); display: block; margin-top: 4px;">
+                        टीप: तुमच्या आवडीची आरती फाईल <code>aarti.mp3</code> नावाने फोल्डरमध्ये ठेवा.
+                    </small>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: LIVE PREVIEW -->
+        <div class="preview-panel">
+            <div class="preview-toolbar">
+                <button class="btn-device active" onclick="setDeviceMode('mobile', this)">📱 Mobile View</button>
+                <button class="btn-device" onclick="setDeviceMode('desktop', this)">💻 Desktop View</button>
+                <button class="btn-device" onclick="refreshPreview()">🔄 Reload</button>
+            </div>
+
+            <div class="preview-frame-container mobile" id="frameContainer">
+                <iframe id="previewFrame" src="index.html"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toastMsg">✅ Config copied to clipboard!</div>
+
+    <script>
+        let currentTheme = 'banana-leaf';
+
+        function selectTheme(themeName, el) {
+            currentTheme = themeName;
+            document.querySelectorAll('.theme-card').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+            updateLive();
+        }
+
+        function setDeviceMode(mode, btn) {
+            const container = document.getElementById('frameContainer');
+            document.querySelectorAll('.btn-device').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (mode === 'mobile') {
+                container.className = 'preview-frame-container mobile';
+            } else {
+                container.className = 'preview-frame-container desktop';
+            }
+        }
+
+        function refreshPreview() {
+            const frame = document.getElementById('previewFrame');
+            frame.src = `index.html?theme=${currentTheme}&t=${Date.now()}`;
+        }
+
+        function generateConfigObject() {
+            return {
+                theme: currentTheme,
+                shlok: {
+                    line1: "॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।",
+                    line2: "निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥"
+                },
+                hero: {
+                    mainTitle: "गणपती बाप्पा<br>मोरया!",
+                    subTitle: "|| श्री गणेशोत्सव २०२६ ||",
+                    countdownDate: document.getElementById('inpCountdownDate').value
+                },
+                message: {
+                    title: "सप्रेम निमंत्रण",
+                    highlightLead: "यंदा आमच्या घरी <span class='highlight'>लाडकिस गणरायाचे</span> मंगलमय आगमन होत आहे.",
+                    description: "बाप्पाच्या कृपेने आमच्या वास्तूत सुख, शांती आणि समृद्धीचा वास राहो. या पावन पर्वावर बाप्पाच्या दर्शनाचा आणि प्रसादाचा लाभ घेण्यासाठी आपण सपरिवार अगत्य उपस्थित राहावे, ही नम्र विनंती.",
+                    modakTitle: "गरमागरम उकडीचे मोदक व महाप्रसाद",
+                    modakSubtitle: "बाप्पाच्या आवडत्या प्रसादाचा आस्वाद घेण्यासाठी सहकुटुंब या!"
+                },
+                family: {
+                    badge: document.getElementById('inpFamilyBadge').value,
+                    title: "निमंत्रक परिवार",
+                    familyName: document.getElementById('inpFamilyName').value,
+                    hostName: document.getElementById('inpHostName').value,
+                    subtext: document.getElementById('inpFamilySubtext').value
+                },
+                schedule: [
+                    {
+                        icon: "🌸",
+                        title: "श्रीगणेश स्थापना व पूजन",
+                        details: document.getElementById('inpSthapanaTime').value
+                    },
+                    {
+                        icon: "🪔",
+                        title: "दैनिक महाआरती व मोदक प्रसाद",
+                        details: document.getElementById('inpAartiTime').value
+                    },
+                    {
+                        icon: "🕉️",
+                        title: "उत्तरपूजा व विसर्जन मिरवणूक",
+                        details: document.getElementById('inpVisarjanTime').value
+                    }
+                ],
+                pooja: {
+                    showSection: document.getElementById('chkShowPooja').checked,
+                    title: "विशेष श्री सत्यनारायण महापूजा",
+                    description: "गणेशोत्सवाच्या शुभमुहूर्तावर आमच्या निवासस्थानी श्री सत्यनारायण महापूजेचे आयोजन केले आहे.",
+                    date: document.getElementById('inpPoojaDate').value,
+                    time: document.getElementById('inpPoojaTime').value,
+                    prasadTime: document.getElementById('inpPoojaPrasad').value,
+                    inviteNote: "तीर्थप्रसाद व केळीच्या पानावरील भोजनप्रसादाचा लाभ घेण्यासाठी नक्की यावे!"
+                },
+                venue: {
+                    title: "पत्ता व स्थळ",
+                    addressLine1: document.getElementById('inpAddr1').value,
+                    addressLine2: document.getElementById('inpAddr2').value,
+                    addressLine3: document.getElementById('inpAddr3').value,
+                    mapsQuery: document.getElementById('inpMapsQuery').value,
+                    phone: document.getElementById('inpPhone').value
+                },
+                images: {
+                    ganeshIdol: document.getElementById('inpImgGanesh').value,
+                    familyPhoto: document.getElementById('inpImgFamily').value,
+                    poojaThali: document.getElementById('inpImgPooja').value,
+                    modakPhoto: document.getElementById('inpImgModak').value
+                },
+                audio: {
+                    enableMusic: document.getElementById('chkEnableMusic').checked,
+                    audioFile: document.getElementById('inpAudioFile').value || "aarti.mp3",
+                    volume: 0.75,
+                    loop: true,
+                    autoPlayOnOpen: true
+                },
+                footer: {
+                    quote: "\"बाप्पाच्या कृपेने आपल्या आयुष्यात सुख, समृद्धी आणि उत्तम आरोग्य लाभो!\"",
+                    tagline: "|| गणपती बाप्पा मोरया, पुढच्या वर्षी लवकर या ||"
+                },
+                features: {
+                    enableAudioBell: true,
+                    enablePetalsAndModakShower: true,
+                    enableCountdown: true
+                }
+            };
+        }
+
+        function generateConfigJSString() {
+            const configObj = generateConfigObject();
+            return `/**
+ * ====================================================================
+ * 🌸 DIGITAL GANPATI INVITATION - MASTER CONFIGURATION FILE (config.js)
+ * ====================================================================
+ */
+
+const INVITATION_CONFIG = ${JSON.stringify(configObj, null, 4)};
+
+if (typeof window !== 'undefined') {
+    window.INVITATION_CONFIG = INVITATION_CONFIG;
+}
+`;
+        }
+
+        let debounceTimer;
+        function updateLive() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const configObj = generateConfigObject();
+                const frame = document.getElementById('previewFrame');
+                try {
+                    if (frame.contentWindow) {
+                        frame.contentWindow.INVITATION_CONFIG = configObj;
+                        frame.contentWindow.location.search = `?theme=${currentTheme}`;
+                    }
+                } catch(e) {
+                    refreshPreview();
+                }
+            }, 500);
+        }
+
+        function copyConfigCode() {
+            const jsStr = generateConfigJSString();
+            navigator.clipboard.writeText(jsStr).then(() => {
+                showToast("📋 config.js copied to clipboard!");
+            });
+        }
+
+        function downloadConfigFile() {
+            const jsStr = generateConfigJSString();
+            const blob = new Blob([jsStr], { type: 'text/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'config.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast("💾 config.js downloaded successfully!");
+        }
+
+        function openNewTabPreview() {
+            window.open(`index.html?theme=${currentTheme}`, '_blank');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastMsg');
+            toast.textContent = msg;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

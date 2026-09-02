@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">|| श्री गणेशाय नमः || गणपती बाप्पा मोरया | निमंत्रण पत्रिका</title>
+    
+    <!-- Google Fonts for Devanagari & Royal Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Cinzel+Decorative:wght@700&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <!-- Central Configuration File -->
+    <script src="config.js"></script>
+
+    <style>
+        /* ==========================================================================
+           1. CSS DESIGN SYSTEMS FOR 4 DISTINCT THEMES
+           ========================================================================== */
+        :root {
+            /* THEME 1: BANANA LEAF (DEFAULT - केळीचे पान) */
+            --bg-color: #0a1f0f;
+            --bg-gradient: linear-gradient(180deg, #0e2a14 0%, #153c1d 25%, #1b4b24 50%, #143a1c 75%, #0a1f0f 100%);
+            --card-bg: linear-gradient(145deg, #163d1e 0%, #1e5229 45%, #153c1d 100%);
+            --card-border: #f2c94c;
+            --card-border-style: dashed;
+            --card-radius: 28px;
+            --primary-accent: #286e35;
+            --gold: #f2c94c;
+            --gold-bright: #ffd700;
+            --gold-light: #fff3b0;
+            --gold-dark: #b8860b;
+            --text-title: #fff3b0;
+            --text-body: #ffffff;
+            --text-sub: #dcedc8;
+            --shadow-accent: rgba(242, 201, 76, 0.45);
+            --door-bg: linear-gradient(145deg, #420808 0%, #1a0202 100%);
+            --pillar-color: linear-gradient(90deg, #996515 0%, #ffd700 45%, #fff3b0 55%, #b8860b 80%, #684200 100%);
+        }
+
+        /* --------------------------------------------------------------------------
+           THEME 2: ROYAL MAROON (राजेशाही राजवाडा व सुवर्ण महिरप)
+           -------------------------------------------------------------------------- */
+        body.theme-royal-maroon {
+            --bg-color: #170101;
+            --bg-gradient: 
+                radial-gradient(circle at 50% 30%, rgba(138, 12, 12, 0.45) 0%, transparent 70%),
+                repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.02) 0px, rgba(255, 215, 0, 0.02) 20px, transparent 20px, transparent 40px),
+                linear-gradient(180deg, #200303 0%, #3a0606 35%, #4f0a0a 65%, #1b0202 100%);
+            --card-bg: linear-gradient(145deg, #380606 0%, #540c0c 50%, #300404 100%);
+            --card-border: #ffd700;
+            --card-border-style: double;
+            --card-radius: 24px;
+            --primary-accent: #8b1111;
+            --gold: #ffd700;
+            --gold-bright: #fff275;
+            --gold-light: #fff6cc;
+            --gold-dark: #c69214;
+            --text-title: #fff2a8;
+            --text-body: #ffffff;
+            --text-sub: #ffcccc;
+            --shadow-accent: rgba(255, 215, 0, 0.55);
+            --door-bg: linear-gradient(145deg, #420404 0%, #1a0101 100%);
+            --pillar-color: linear-gradient(90deg, #6e0c0c 0%, #ffd700 35%, #fff6cc 50%, #c69214 75%, #420606 100%);
+        }
+
+        body.theme-royal-maroon .leaf-card {
+            border: 4px double var(--gold);
+            box-shadow: 0 25px 55px rgba(0,0,0,0.85), 0 0 30px rgba(255, 215, 0, 0.4), inset 0 0 30px rgba(0,0,0,0.6);
+        }
+        body.theme-royal-maroon .side-left {
+            background: linear-gradient(90deg, rgba(120, 15, 15, 0.7) 0%, transparent 100%);
+            border-right: 3px solid rgba(255, 215, 0, 0.4);
+        }
+        body.theme-royal-maroon .side-right {
+            background: linear-gradient(-90deg, rgba(120, 15, 15, 0.7) 0%, transparent 100%);
+            border-left: 3px solid rgba(255, 215, 0, 0.4);
+        }
+
+        /* --------------------------------------------------------------------------
+           THEME 3: SUNSET SAFFRON (पावन भगवा / महाआरती व दिवे)
+           -------------------------------------------------------------------------- */
+        body.theme-sunset-saffron {
+            --bg-color: #260b00;
+            --bg-gradient: 
+                radial-gradient(circle at 50% 25%, rgba(230, 81, 0, 0.4) 0%, transparent 65%),
+                linear-gradient(180deg, #300d01 0%, #521a02 35%, #752804 65%, #240900 100%);
+            --card-bg: linear-gradient(145deg, #571e04 0%, #822e06 50%, #451602 100%);
+            --card-border: #ffb703;
+            --card-border-style: solid;
+            --card-radius: 32px;
+            --primary-accent: #e65100;
+            --gold: #ffb703;
+            --gold-bright: #ffd166;
+            --gold-light: #fff3b0;
+            --gold-dark: #b8860b;
+            --text-title: #ffe8a3;
+            --text-body: #ffffff;
+            --text-sub: #ffdec2;
+            --shadow-accent: rgba(255, 183, 3, 0.6);
+            --door-bg: linear-gradient(145deg, #471501 0%, #1f0700 100%);
+            --pillar-color: linear-gradient(90deg, #8a2f04 0%, #ffb703 40%, #fff3b0 55%, #d97706 75%, #471501 100%);
+        }
+
+        body.theme-sunset-saffron .leaf-card {
+            border: 2px solid #ffb703;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.8), 0 0 35px rgba(255, 150, 0, 0.45);
+        }
+
+        /* --------------------------------------------------------------------------
+           THEME 4: TEMPLE IVORY (पवित्र रेशमी श्वेत, संगमरमर व सुवर्ण)
+           -------------------------------------------------------------------------- */
+        body.theme-temple-ivory {
+            --bg-color: #f7f3e8;
+            --bg-gradient: 
+                radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                linear-gradient(180deg, #fffdf8 0%, #f7f2e4 35%, #efe5cd 70%, #fffdf8 100%);
+            --card-bg: linear-gradient(145deg, #ffffff 0%, #fbf7ee 50%, #f3ebd7 100%);
+            --card-border: #c99a2c;
+            --card-border-style: solid;
+            --card-radius: 26px;
+            --primary-accent: #8c1d1d;
+            --gold: #b3821a;
+            --gold-bright: #d4af37;
+            --gold-light: #522704;
+            --gold-dark: #73510c;
+            --text-title: #610d0d;
+            --text-body: #24140b;
+            --text-sub: #5c3b24;
+            --shadow-accent: rgba(179, 130, 26, 0.4);
+            --door-bg: linear-gradient(145deg, #3d0606 0%, #170101 100%);
+            --pillar-color: linear-gradient(90deg, #d4af37 0%, #fff8db 35%, #b3821a 60%, #fff8db 75%, #8c6710 100%);
+        }
+
+        body.theme-temple-ivory .leaf-card {
+            border: 2px solid #c99a2c;
+            box-shadow: 0 20px 45px rgba(120, 90, 40, 0.25), 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+        body.theme-temple-ivory .shlok-header {
+            color: #610d0d !important;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.8);
+        }
+        body.theme-temple-ivory .sub-title {
+            color: #7a1515 !important;
+            text-shadow: none;
+        }
+        body.theme-temple-ivory .venue-address,
+        body.theme-temple-ivory .schedule-item,
+        body.theme-temple-ivory .pooja-details-box,
+        body.theme-temple-ivory .modak-showcase,
+        body.theme-temple-ivory .photo-container {
+            background: rgba(255, 255, 255, 0.75) !important;
+            border-color: #c99a2c !important;
+            color: #24140b !important;
+        }
+        body.theme-temple-ivory .pooja-detail-row,
+        body.theme-temple-ivory .schedule-info p {
+            color: #24140b !important;
+        }
+        body.theme-temple-ivory .pooja-detail-row strong,
+        body.theme-temple-ivory .schedule-info h4 {
+            color: #610d0d !important;
+        }
+        body.theme-temple-ivory .countdown-box {
+            background: #ffffff !important;
+            border-color: #b3821a !important;
+        }
+        body.theme-temple-ivory .countdown-number {
+            color: #610d0d !important;
+        }
+        body.theme-temple-ivory .countdown-label {
+            color: #73510c !important;
+        }
+        body.theme-temple-ivory .scroll-down-indicator span {
+            color: #610d0d !important;
+        }
+
+        /* ==========================================================================
+           2. GENERAL LAYOUT & UTILITIES
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-body);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            transition: background-color 0.5s ease;
+        }
+
+        /* BACKGROUND CANVAS */
+        #festive-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 60;
+        }
+
+        /* FLOATING QUICK THEME SWITCHER BAR */
+        .theme-switcher-pill {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(255, 215, 0, 0.6);
+            border-radius: 50px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(242, 201, 76, 0.4);
+            animation: fadeInPill 1.2s ease;
+        }
+        @keyframes fadeInPill {
+            from { opacity: 0; transform: translate(-50%, 20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+        .theme-pill-btn {
+            background: transparent;
+            border: none;
+            color: #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        .theme-pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+        .theme-pill-btn.active {
+            background: linear-gradient(135deg, #ffd700, #ff9900);
+            color: #000;
+            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* AUDIO CONTROLLER BUTTON */
+        .audio-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+            color: #1a0f00;
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6), 0 0 20px var(--shadow-accent);
+            transition: all 0.3s ease;
+        }
+        .audio-btn:hover {
+            transform: scale(1.12);
+        }
+        .audio-btn.playing {
+            animation: pulse-glow 2s infinite alternate;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 6px var(--gold); }
+            100% { box-shadow: 0 0 25px var(--gold-bright); }
+        }
+
+        /* ==========================================================================
+           3. 3D ROYAL TEMPLE DOORS (OPENING REVEAL)
+           ========================================================================== */
+        .door-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            perspective: 1600px;
+            background: radial-gradient(circle, #200505 0%, #000000 100%);
+            cursor: pointer;
+            overflow: hidden;
+            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .door {
+            width: 50%;
+            height: 100%;
+            background: var(--door-bg);
+            border: 4px solid var(--gold-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 2.4s cubic-bezier(0.65, 0, 0.35, 1);
+            position: relative;
+            box-shadow: inset 0 0 90px rgba(0,0,0,0.95), 0 0 70px rgba(0,0,0,0.9);
+            transform-style: preserve-3d;
+        }
+        
+        .door::before, .door::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 38%;
+            border: 3px solid var(--gold);
+            border-radius: 12px; 
+            box-shadow: inset 0 0 35px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7);
+            background: 
+                radial-gradient(circle at center, rgba(242, 201, 76, 0.15) 0%, transparent 70%),
+                repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(242, 201, 76, 0.08) 12px, rgba(242, 201, 76, 0.08) 24px);
+        }
+        .door::before { top: 8%; }
+        .door::after { bottom: 8%; }
+        
+        .door-left {
+            transform-origin: left center;
+            border-right: 6px solid var(--gold);
+        }
+        .door-right {
+            transform-origin: right center;
+            border-left: 6px solid var(--gold);
+        }
+        
+        .door-handle {
+            width: 65px;
+            height: 65px;
+            border: 6px solid var(--gold);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.9), inset 0 0 15px var(--gold-light); 
+            background: radial-gradient(circle, var(--gold-dark), #1a0303); 
+            z-index: 5;
+            transform: translateZ(35px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .door-handle::after {
+            content: 'ॐ';
+            font-size: 1.6rem;
+            color: var(--gold-light);
+            text-shadow: 0 0 10px var(--gold-bright);
+        }
+        .door-left .door-handle { right: 25px; }
+        .door-right .door-handle { left: 25px; }
+        
+        .center-emblem {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #4a0707 40%, #1f0101 100%);
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px var(--gold), 0 12px 35px rgba(0,0,0,0.9);
+            transition: opacity 0.8s ease, transform 1s ease;
+            pointer-events: none;
+        }
+        .center-emblem-icon {
+            font-size: 3.5rem;
+            color: var(--gold-light);
+            text-shadow: 0 0 18px var(--gold-bright);
+            line-height: 1;
+        }
+        .center-emblem-text {
+            font-size: 0.85rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .door-hint {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold-light);
+            text-align: center;
+            width: 90%;
+            max-width: 480px;
+            z-index: 25;
+            pointer-events: auto;
+            animation: float-pulse 2.2s infinite ease-in-out;
+        }
+        .door-hint-title {
+            font-family: 'Tiro Devanagari Marathi', serif;
+            font-size: 2.3rem;
+            color: var(--gold-light);
+            text-shadow: 0 0 20px var(--gold-bright), 2px 2px 10px #000;
+            margin-bottom: 15px;
+        }
+        .door-open-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 36px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright), var(--gold-light));
+            color: #2b1100;
+            font-size: 1.25rem;
+            font-weight: 800;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 30px rgba(242, 201, 76, 0.9), 0 8px 25px rgba(0,0,0,0.7);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .door-open-btn:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 45px var(--gold-light), 0 12px 30px rgba(0,0,0,0.8);
+        }
+
+        @keyframes float-pulse {
+            0% { transform: translate(-50%, 0) scale(1); }
+            50% { transform: translate(-50%, -10px) scale(1.03); }
+            100% { transform: translate(-50%, 0) scale(1); }
+        }
+
+        .door-open .door-left { transform: rotateY(-118deg); }
+        .door-open .door-right { transform: rotateY(118deg); }
+        .door-open .center-emblem {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+        .door-open .door-hint {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           4. MAIN PAGE WRAPPER & SECTIONS
+           ========================================================================== */
+        .invite-wrapper {
+            background-color: var(--bg-color);
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .side-banana-leaves {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            pointer-events: none;
+            z-index: 15;
+            opacity: 0.35;
+        }
+        .side-left {
+            left: 0;
+            background: radial-gradient(ellipse at 0% 50%, var(--primary-accent) 0%, transparent 80%);
+            border-right: 2px dashed rgba(242, 201, 76, 0.2);
+        }
+        .side-right {
+            right: 0;
+            background: radial-gradient(ellipse at 100% 50%, var(--primary-accent) 0%, transparent 80%);
+            border-left: 2px dashed rgba(242, 201, 76, 0.2);
+        }
+
+        /* HANGING FLOWER TORAN */
+        .toran-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            z-index: 25;
+            pointer-events: none;
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
+        }
+        .toran-garland {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        .toran-cluster {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: swing-toran 4s ease-in-out infinite alternate;
+            transform-origin: top center;
+        }
+        .toran-cluster:nth-child(even) {
+            animation-duration: 4.8s;
+            animation-delay: -1.2s;
+        }
+        .toran-leaf {
+            font-size: 1.8rem;
+            line-height: 1;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+        }
+        .toran-flower {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffb300 40%, #ff5722 100%);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            margin-top: -6px;
+        }
+        .toran-flower.yellow {
+            background: radial-gradient(circle, #fff176 40%, #fbc02d 100%);
+        }
+
+        @keyframes swing-toran {
+            0% { transform: rotate(3deg); }
+            100% { transform: rotate(-3deg); }
+        }
+
+        /* ==========================================================================
+           5. TEMPLE MANDAP / MAKHAR (सुवर्ण मंदिर व मखर)
+           ========================================================================== */
+        .temple-mandap {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            margin: 15px auto 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform-style: preserve-3d;
+        }
+
+        .temple-shikhar {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        .temple-kalash {
+            font-size: 2.4rem;
+            color: var(--gold-bright);
+            filter: drop-shadow(0 0 15px var(--gold-bright));
+            animation: kalash-glow 3s infinite alternate;
+        }
+        @keyframes kalash-glow {
+            0% { filter: drop-shadow(0 0 8px var(--gold)); }
+            100% { filter: drop-shadow(0 0 25px var(--gold-bright)); }
+        }
+        .temple-arch-top {
+            width: 85%;
+            height: 35px;
+            border-top: 5px solid var(--gold);
+            border-left: 5px solid var(--gold);
+            border-right: 5px solid var(--gold);
+            border-radius: 120px 120px 0 0;
+            background: linear-gradient(180deg, rgba(242, 201, 76, 0.25) 0%, transparent 100%);
+            box-shadow: 0 0 20px rgba(242, 201, 76, 0.4);
+            position: relative;
+        }
+
+        .mandap-frame {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .temple-pillar {
+            width: 28px;
+            height: 380px;
+            background: var(--pillar-color);
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 15px var(--shadow-accent);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 12;
+            position: relative;
+        }
+        .pillar-top, .pillar-base {
+            width: 38px;
+            height: 18px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold-dark));
+            border-radius: 4px;
+            border: 1px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .hanging-bell {
+            font-size: 1.4rem;
+            animation: ring-bell 3s ease-in-out infinite alternate;
+            transform-origin: top center;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+        }
+        @keyframes ring-bell {
+            0% { transform: rotate(8deg); }
+            100% { transform: rotate(-8deg); }
+        }
+
+        .samai-container {
+            position: absolute;
+            bottom: 10px;
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .samai-left { left: -10px; }
+        .samai-right { right: -10px; }
+
+        .diya-flame {
+            font-size: 1.8rem;
+            animation: flame-flicker 1.5s infinite alternate ease-in-out;
+            filter: drop-shadow(0 0 10px #ffaa00) drop-shadow(0 0 20px #ff5500);
+        }
+        @keyframes flame-flicker {
+            0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+            50% { transform: scale(1.15) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 15px #ffcc00) drop-shadow(0 0 25px #ff7700); }
+            100% { transform: scale(0.95) rotate(-1deg); opacity: 0.92; }
+        }
+
+        .ganesha-3d-wrapper {
+            position: relative;
+            width: 290px;
+            height: 370px;
+            margin: 0 15px;
+            animation: float-3d 6s infinite ease-in-out;
+            z-index: 10;
+        }
+        .ganesha-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 140px 140px 20px 20px;
+            border: 6px solid var(--gold);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.7), 
+                0 0 45px var(--shadow-accent),
+                inset 0 0 20px rgba(0,0,0,0.6);
+            display: block;
+        }
+
+        .ganesha-3d-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -15%;
+            left: -15%;
+            width: 130%;
+            height: 130%;
+            background: radial-gradient(circle, rgba(255, 223, 0, 0.75) 0%, rgba(255, 119, 0, 0.4) 45%, transparent 75%);
+            opacity: 0.85;
+            filter: blur(25px);
+            z-index: -1;
+            animation: pulse-aura 3s infinite alternate;
+        }
+
+        @keyframes float-3d {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        @keyframes pulse-aura {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            100% { transform: scale(1.15); opacity: 0.95; }
+        }
+
+        .temple-base {
+            width: 100%;
+            height: 25px;
+            background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold-dark) 50%, #3e2700 100%);
+            border-radius: 8px;
+            border: 2px solid #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 12;
+            margin-top: -5px;
+        }
+
+        /* ==========================================================================
+           6. TITLES & COUNTDOWN
+           ========================================================================== */
+        .shlok-header {
+            font-family: 'Tiro Devanagari Marathi', serif;
+            color: var(--text-title);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 15px var(--shadow-accent);
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-size: 3.6rem;
+            color: var(--text-title);
+            text-align: center;
+            line-height: 1.15;
+            margin-top: 15px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 0 0 25px var(--gold-bright);
+        }
+
+        .sub-title {
+            font-size: 1.4rem;
+            color: var(--text-sub);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        .countdown-box {
+            display: flex;
+            gap: 12px;
+            margin: 25px 0 10px 0;
+            background: var(--card-bg);
+            padding: 12px 26px;
+            border-radius: 50px;
+            border: 2px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6), 0 0 15px var(--shadow-accent);
+        }
+        .countdown-item {
+            text-align: center;
+            color: var(--gold-light);
+        }
+        .countdown-number {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--text-body);
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.75rem;
+            color: var(--gold-light);
+        }
+        .countdown-divider {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            align-self: center;
+        }
+
+        .scroll-down-indicator {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 25px;
+            animation: bounce 2s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .scroll-down-indicator span {
+            font-size: 1rem;
+            color: var(--gold-light);
+            font-family: 'Mukta', sans-serif;
+            margin-top: 4px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-12px); }
+            60% { transform: translateY(-6px); }
+        }
+
+        /* ==========================================================================
+           7. CARDS & CONTENT
+           ========================================================================== */
+        .section {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 70px 20px;
+            perspective: 1200px;
+            position: relative;
+        }
+
+        #hero-section {
+            min-height: 100vh;
+            padding-top: 110px;
+            padding-bottom: 50px;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(60px) scale(0.96);
+            transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.25, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.25, 1);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+
+        .leaf-card {
+            background: var(--card-bg);
+            padding: 45px 35px;
+            border-radius: var(--card-radius);
+            border: 2px var(--card-border-style) var(--card-border);
+            box-shadow: 0 25px 55px rgba(0,0,0,0.6), 0 0 25px var(--shadow-accent);
+            max-width: 630px;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+
+        .leaf-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 65px rgba(0,0,0,0.7), 0 0 35px var(--shadow-accent);
+        }
+
+        .corner {
+            position: absolute;
+            color: var(--gold-bright);
+            font-size: 1.8rem;
+            opacity: 0.9;
+            text-shadow: 0 0 10px var(--gold-bright);
+        }
+        .top-left { top: 14px; left: 18px; }
+        .top-right { top: 14px; right: 18px; }
+        .bottom-left { bottom: 14px; left: 18px; }
+        .bottom-right { bottom: 14px; right: 18px; }
+
+        .card-header-icon {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px var(--gold));
+        }
+
+        .card-title {
+            color: var(--text-title);
+            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .text-large {
+            font-size: 1.45rem;
+            line-height: 1.8;
+            color: var(--text-body);
+            font-weight: 600;
+        }
+        .text-medium {
+            font-size: 1.25rem;
+            line-height: 1.75;
+            color: var(--text-sub);
+        }
+        
+        .highlight {
+            color: var(--gold-bright);
+            font-weight: 800;
+            font-size: 1.7rem;
+            font-family: 'Tiro Devanagari Marathi', serif;
+            display: inline-block;
+            margin: 0 4px;
+            border-bottom: 2px solid var(--gold);
+            text-shadow: 0 0 10px var(--shadow-accent);
+        }
+
+        /* MODAK HIGHLIGHT BOX */
+        .modak-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px dashed var(--gold-bright);
+            border-radius: 20px;
+            padding: 16px 22px;
+            margin: 22px 0;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px var(--shadow-accent);
+        }
+        .modak-thumb-img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 2.5px solid var(--gold-bright);
+            object-fit: cover;
+            box-shadow: 0 0 20px var(--shadow-accent), 0 6px 15px rgba(0,0,0,0.7);
+            animation: modak-bounce 2.8s infinite ease-in-out;
+            flex-shrink: 0;
+        }
+        @keyframes modak-bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.05); }
+        }
+        .modak-text {
+            font-size: 1.25rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            text-align: left;
+        }
+        .modak-text span {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        /* FAMILY SECTION */
+        .photo-container {
+            position: relative;
+            margin: 15px auto 25px auto;
+            max-width: 92%;
+            padding: 12px;
+            background: rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border-radius: 18px;
+            border: 2px solid var(--gold);
+        }
+        .photo-container::before {
+            content: '';
+            position: absolute;
+            top: 6px; left: 6px; right: 6px; bottom: 6px;
+            border: 2px dashed var(--gold-light);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+        .family-photo {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+        .family-badge {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+            color: #1a0f00;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 6px 22px;
+            border-radius: 20px;
+            border: 2px solid #fff;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .family-names {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-top: 25px;
+            line-height: 1.6;
+            font-family: 'Tiro Devanagari Marathi', serif;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+        }
+        .family-subtext {
+            font-size: 1.15rem;
+            color: var(--text-sub);
+            margin-top: 8px;
+        }
+
+        /* SCHEDULE TIMELINE */
+        .schedule-list {
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .schedule-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 16px 20px;
+            border-radius: 16px;
+            border-left: 5px solid var(--gold-bright);
+            border-top: 1px solid rgba(242, 201, 76, 0.2);
+        }
+        .schedule-icon {
+            font-size: 1.9rem;
+            line-height: 1;
+        }
+        .schedule-info h4 {
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .schedule-info p {
+            font-size: 1.15rem;
+            color: var(--text-body);
+        }
+
+        /* SATYANARAYANA POOJA */
+        .pooja-card {
+            border-color: var(--gold-bright);
+        }
+        .pooja-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--gold-bright);
+            margin: 0 auto 15px auto;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 25px var(--gold);
+            display: block;
+        }
+        .pooja-details-box {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(242, 201, 76, 0.4);
+            padding: 18px;
+            border-radius: 16px;
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .pooja-detail-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            color: #fffaea;
+        }
+        .pooja-detail-row strong {
+            color: var(--gold-light);
+            min-width: 105px;
+        }
+
+        /* VENUE & BUTTONS */
+        .venue-address {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 22px;
+            border-radius: 16px;
+            border: 1px dashed var(--gold);
+            margin: 20px 0;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-weight: 600;
+            color: var(--text-body);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        @media(min-width: 480px) {
+            .btn-group {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+            color: #1a0f00;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.15rem; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+        .btn:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 14px 30px var(--shadow-accent);
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold-light));
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #1e7e34, #25D366);
+            color: #fff;
+            border-color: #d4ffd9;
+        }
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #19692c, #20ba59);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* FOOTER */
+        .footer-card {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 30px 20px;
+        }
+        .footer-quote {
+            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-size: 2.3rem;
+            color: var(--text-title);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 20px var(--gold);
+        }
+        .footer-tagline {
+            font-size: 1.4rem;
+            color: var(--text-sub);
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        /* FLOATING SCROLL BUTTON */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 85px;
+            right: 25px;
+            width: 48px;
+            height: 48px;
+            background: var(--card-bg);
+            color: var(--gold-light);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 90;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        }
+        .scroll-top-btn.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-top-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 600px) {
+            .main-title { font-size: 2.7rem; }
+            .shlok-header { font-size: 1.25rem; }
+            .leaf-card { padding: 35px 20px; }
+            .card-title { font-size: 1.85rem; }
+            .text-large { font-size: 1.25rem; }
+            .text-medium { font-size: 1.1rem; }
+            .ganesha-3d-wrapper { width: 240px; height: 310px; margin: 0 8px; }
+            .temple-pillar { width: 20px; height: 320px; }
+            .pillar-top, .pillar-base { width: 28px; }
+            .samai-container { display: none; }
+            .section { padding: 50px 15px; min-height: 75vh; }
+            .door-hint-title { font-size: 1.8rem; }
+            .door-open-btn { font-size: 1.05rem; padding: 12px 24px; }
+            .theme-switcher-pill { padding: 4px 8px; gap: 4px; bottom: 15px; }
+            .theme-pill-btn { font-size: 0.75rem; padding: 5px 8px; }
+        }
+    </style>
+</head>
+<body class="theme-banana-leaf" id="appBody">
+
+    <!-- CANVAS FOR FALLING MARIGOLD PETALS & UKADICHE MODAKS -->
+    <canvas id="festive-canvas"></canvas>
+
+    <!-- FLOATING THEME SWITCHER BAR -->
+    <div class="theme-switcher-pill" id="themeSwitcher">
+        <button class="theme-pill-btn active" id="btnThemeBanana" onclick="switchThemeTo('banana-leaf')">🌿 Banana</button>
+        <button class="theme-pill-btn" id="btnThemeMaroon" onclick="switchThemeTo('royal-maroon')">👑 Royal</button>
+        <button class="theme-pill-btn" id="btnThemeSaffron" onclick="switchThemeTo('sunset-saffron')">🪔 Saffron</button>
+        <button class="theme-pill-btn" id="btnThemeIvory" onclick="switchThemeTo('temple-ivory')">🛕 Ivory</button>
+    </div>
+
+    <!-- FLOATING MUSIC TOGGLE BUTTON -->
+    <button class="audio-btn" id="audioToggle" title="आरती व संगीत चालू / बंद करा" aria-label="Toggle Devotional Music">
+        🔊
+    </button>
+
+    <!-- SIDE ACCENTS -->
+    <div class="side-banana-leaves side-left"></div>
+    <div class="side-banana-leaves side-right"></div>
+
+    <!-- 1. 3D ROYAL TEMPLE DOORS -->
+    <div class="door-container" id="doors">
+        <div class="door door-left">
+            <div class="door-handle"></div>
+        </div>
+        <div class="door door-right">
+            <div class="door-handle"></div>
+        </div>
+        
+        <!-- Center Emblem -->
+        <div class="center-emblem">
+            <div class="center-emblem-icon">卐</div>
+            <div class="center-emblem-text">शुभ लाभ</div>
+        </div>
+
+        <!-- Door Open Prompt -->
+        <div class="door-hint" id="hint">
+            <h2 class="door-hint-title">|| श्री गणेशाय नमः ||</h2>
+            <button class="door-open-btn" id="doorOpenTrigger">
+                ✨ निमंत्रण उघडा (Open Invitation) ✨
+            </button>
+        </div>
+    </div>
+
+    <!-- 2. MAIN INVITATION WRAPPER -->
+    <div class="invite-wrapper" id="mainInvite">
+        
+        <!-- Hanging Toran -->
+        <div class="toran-banner">
+            <div class="toran-garland">
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
+                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION: GRAND TEMPLE MANDAP & GANPATI BAPPA -->
+        <section class="section" id="hero-section">
+            <div class="scroll-reveal visible">
+                <div class="shlok-header" id="shlokContainer">
+                    ॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>
+                    निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+                </div>
+
+                <!-- GRAND DECORATIVE TEMPLE MANDAP (मखर) -->
+                <div class="temple-mandap">
+                    <!-- Top Shikhar & Kalash -->
+                    <div class="temple-shikhar">
+                        <div class="temple-kalash">🪔 🕉️ 🪔</div>
+                        <div class="temple-arch-top"></div>
+                    </div>
+
+                    <!-- Mandap Frame with Pillars and Ganpati Idol -->
+                    <div class="mandap-frame">
+                        <!-- Left Golden Pillar & Bell -->
+                        <div class="temple-pillar">
+                            <div class="pillar-top"></div>
+                            <div class="hanging-bell">🔔</div>
+                            <div class="pillar-base"></div>
+                        </div>
+
+                        <!-- Left Brass Diya Samai -->
+                        <div class="samai-container samai-left">
+                            <div class="diya-flame">🔥</div>
+                            <div style="font-size: 2.2rem;">🪔</div>
+                        </div>
+
+                        <!-- 3D Divine Ganesha Idol -->
+                        <div class="ganesha-3d-wrapper">
+                            <img src="ganesh.jpg" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
+                        </div>
+
+                        <!-- Right Brass Diya Samai -->
+                        <div class="samai-container samai-right">
+                            <div class="diya-flame">🔥</div>
+                            <div style="font-size: 2.2rem;">🪔</div>
+                        </div>
+
+                        <!-- Right Golden Pillar & Bell -->
+                        <div class="temple-pillar">
+                            <div class="pillar-top"></div>
+                            <div class="hanging-bell">🔔</div>
+                            <div class="pillar-base"></div>
+                        </div>
+                    </div>
+
+                    <!-- Temple Base Asan -->
+                    <div class="temple-base"></div>
+                </div>
+
+                <h1 class="main-title" id="heroTitle">गणपती बाप्पा<br>मोरया!</h1>
+                <div class="sub-title" id="heroSubTitle">|| श्री गणेशोत्सव २०२६ ||</div>
+
+                <!-- Event Countdown -->
+                <div class="countdown-box" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-days">--</div>
+                        <div class="countdown-label">दिवस</div>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-hours">--</div>
+                        <div class="countdown-label">तास</div>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-minutes">--</div>
+                        <div class="countdown-label">मिनिटे</div>
+                    </div>
+                </div>
+
+                <div class="scroll-down-indicator" onclick="scrollToSection('message-section')">
+                    ↓
+                    <span>खाली स्क्रोल करा</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: INVITATION MESSAGE -->
+        <section class="section" id="message-section">
+            <div class="scroll-reveal leaf-card">
+                <div class="corner top-left">ॐ</div>
+                <div class="corner top-right">ॐ</div>
+                <div class="corner bottom-left">ॐ</div>
+                <div class="corner bottom-right">ॐ</div>
+
+                <div class="card-header-icon">🌿</div>
+                <h2 class="card-title" id="msgTitle">सप्रेम निमंत्रण</h2>
+                
+                <p class="text-large" id="msgLead">
+                    यंदा आमच्या घरी <span class="highlight">लाडक्या गणरायाचे</span> मंगलमय आगमन होत आहे.
+                </p>
+                <p class="text-medium" id="msgDesc" style="margin-top: 20px;">
+                    बाप्पाच्या कृपेने आमच्या वास्तूत सुख, शांती आणि समृद्धीचा वास राहो. या पावन पर्वावर बाप्पाच्या दर्शनाचा आणि प्रसादाचा लाभ घेण्यासाठी आपण सपरिवार अगत्य उपस्थित राहावे, ही नम्र विनंती.
+                </p>
+
+                <!-- MODAK HIGHLIGHT -->
+                <div class="modak-showcase" id="modakShowcase">
+                    <img src="modak.jpg" id="modakImg" alt="उकडीचे मोदक" class="modak-thumb-img">
+                    <div class="modak-text">
+                        <span id="modakTitle" style="font-size: 1.25rem; font-weight: 700; color: var(--gold-light);">गरमागरम उकडीचे मोदक व महाप्रसाद</span>
+                        <span id="modakSub">बाप्पाच्या आवडत्या प्रसादाचा आस्वाद घेण्यासाठी सहकुटुंब या!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FAMILY DETAILS -->
+        <section class="section" id="family-section">
+            <div class="scroll-reveal leaf-card">
+                <div class="corner top-left">❀</div>
+                <div class="corner top-right">❀</div>
+                <div class="corner bottom-left">❀</div>
+                <div class="corner bottom-right">❀</div>
+
+                <h2 class="card-title" id="familyCardTitle">निमंत्रक परिवार</h2>
+
+                <div class="photo-container">
+                    <img src="family.jpg" id="familyImg" alt="आमचे कुटुंब" class="family-photo">
+                    <div class="family-badge" id="familyBadge">✨ राऊत परिवार ✨</div>
+                </div>
+                
+                <div class="family-names" id="familyNames">
+                    राऊत परिवार<br>
+                    <span style="font-size: 1.35rem; color: var(--gold-light); font-weight: 700;">
+                        निमंत्रक: श्री. कल्पेश राऊत
+                    </span>
+                </div>
+                <div class="family-subtext" id="familySubtext">
+                    आणि समस्त राऊत परिवार आपले सहर्ष स्वागत करीत आहे.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: UTSAV SCHEDULE -->
+        <section class="section" id="schedule-section">
+            <div class="scroll-reveal leaf-card">
+                <div class="corner top-left">❋</div>
+                <div class="corner top-right">❋</div>
+                <div class="corner bottom-left">❋</div>
+                <div class="corner bottom-right">❋</div>
+
+                <div class="card-header-icon">🌺</div>
+                <h2 class="card-title">कार्यक्रमाची रूपरेषा</h2>
+
+                <div class="schedule-list" id="scheduleList">
+                    <!-- Populated dynamically via config -->
+                </div>
+
+                <p class="text-large" style="margin-top: 15px; color: var(--gold-light);">
+                    आपल्या उपस्थितीने कार्यक्रमाची शोभा वाढवावी!
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SATYANARAYANA POOJA SPECIAL SECTION -->
+        <section class="section" id="pooja-section">
+            <div class="scroll-reveal leaf-card pooja-card">
+                <div class="corner top-left" style="color: var(--gold-light);">❋</div>
+                <div class="corner top-right" style="color: var(--gold-light);">❋</div>
+                <div class="corner bottom-left" style="color: var(--gold-light);">❋</div>
+                <div class="corner bottom-right" style="color: var(--gold-light);">❋</div>
+                
+                <img src="pooja.jpg" id="poojaImg" alt="पूजा थाळी" class="pooja-img">
+                
+                <h2 class="card-title" id="poojaTitle">विशेष श्री सत्यनारायण महापूजा</h2>
+                
+                <p class="text-medium" id="poojaDesc" style="color: #fffaea;">
+                    गणेशोत्सवाच्या शुभमुहूर्तावर आमच्या निवासस्थानी श्री सत्यनारायण महापूजेचे आयोजन केले आहे.
+                </p>
+
+                <div class="pooja-details-box">
+                    <div class="pooja-detail-row">
+                        <strong>📅 दिनांक:</strong> 
+                        <span id="poojaDate">१८ सप्टेंबर २०२६ (शुक्रवार)</span>
+                    </div>
+                    <div class="pooja-detail-row">
+                        <strong>⏰ वेळ:</strong> 
+                        <span id="poojaTime">सकाळी १०:०० वाजता (पूजा प्रारंभ)</span>
+                    </div>
+                    <div class="pooja-detail-row">
+                        <strong>🍛 महाप्रसाद:</strong> 
+                        <span id="poojaPrasad" style="color: var(--gold-light); font-weight: 700;">दुपारी १:०० ते ३:३० वाजेपर्यंत</span>
+                    </div>
+                </div>
+                
+                <p class="text-large" id="poojaNote">
+                    तीर्थप्रसाद व केळीच्या पानावरील भोजनप्रसादाचा लाभ घेण्यासाठी नक्की यावे!
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: VENUE & GOOGLE MAPS -->
+        <section class="section" id="venue-section">
+            <div class="scroll-reveal leaf-card">
+                <div class="corner top-left">📍</div>
+                <div class="corner top-right">📍</div>
+                <div class="corner bottom-left">📍</div>
+                <div class="corner bottom-right">📍</div>
+
+                <h2 class="card-title" id="venueTitle">पत्ता व स्थळ</h2>
+                
+                <div class="venue-address" id="venueAddress">
+                    <strong>२०२, स्नेहकुंज अपार्टमेंट,</strong><br>
+                    रेवदंडा - अलिबाग,<br>
+                    जि. रायगड
+                </div>
+
+                <div class="btn-group">
+                    <a href="https://maps.google.com/?q=Snehkunj+Apartment+Revdanda+Alibag" id="mapBtn" target="_blank" rel="noopener noreferrer" class="btn">
+                        📍 गुगल मॅपवर दिशा पहा (Directions)
+                    </a>
+                    <a href="tel:+919876543210" id="callBtn" class="btn">
+                        📞 संपर्क साधा (Call Host)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CONCLUDING GREETINGS & WHATSAPP SHARE -->
+        <section class="section" style="min-height: 60vh;">
+            <div class="scroll-reveal leaf-card footer-card">
+                <div class="footer-quote" id="footerQuote">
+                    "बाप्पाच्या कृपेने आपल्या आयुष्यात सुख, समृद्धी आणि उत्तम आरोग्य लाभो!"
+                </div>
+                
+                <div class="footer-tagline" id="footerTagline">
+                    || गणपती बाप्पा मोरया, पुढच्या वर्षी लवकर या ||
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">
+                        📲 हे निमंत्रण WhatsApp वर शेअर करा
+                    </button>
+                    <button class="btn" onclick="addToCalendar()">
+                        📅 कॅलेंडरमध्ये जोडा (Add to Calendar)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FLOATING SCROLL TO TOP BUTTON -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="वर जा" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>
+
+    <!-- JAVASCRIPT TEMPLATE RENDERER, 3D DOORS, AUDIO & PARTICLES -->
+    <script>
+        // ====================================================================
+        // 1. DYNAMIC CONFIGURATION LOADER & THEME APPLIER
+        // ====================================================================
+        const config = window.INVITATION_CONFIG || {};
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentActiveTheme = urlParams.get('theme') || config.theme || 'banana-leaf';
+
+        function switchThemeTo(themeName) {
+            currentActiveTheme = themeName;
+            const bodyEl = document.getElementById('appBody');
+            bodyEl.className = 'theme-' + themeName;
+
+            // Update Theme Switcher Active Button
+            document.querySelectorAll('.theme-pill-btn').forEach(btn => btn.classList.remove('active'));
+            if (themeName === 'banana-leaf') document.getElementById('btnThemeBanana').classList.add('active');
+            if (themeName === 'royal-maroon') document.getElementById('btnThemeMaroon').classList.add('active');
+            if (themeName === 'sunset-saffron') document.getElementById('btnThemeSaffron').classList.add('active');
+            if (themeName === 'temple-ivory') document.getElementById('btnThemeIvory').classList.add('active');
+        }
+
+        switchThemeTo(currentActiveTheme);
+
+        // Hide switcher pill if disabled in config
+        if (config.features && config.features.enableQuickThemeSwitcher === false) {
+            const switcherEl = document.getElementById('themeSwitcher');
+            if (switcherEl) switcherEl.style.display = 'none';
+        }
+
+        // Populate Shlok
+        if (config.shlok) {
+            const shlokEl = document.getElementById('shlokContainer');
+            if (shlokEl) {
+                shlokEl.innerHTML = `${config.shlok.line1}<br>${config.shlok.line2}`;
+            }
+        }
+
+        // Populate Hero
+        if (config.hero) {
+            if (config.hero.mainTitle) document.getElementById('heroTitle').innerHTML = config.hero.mainTitle;
+            if (config.hero.subTitle) document.getElementById('heroSubTitle').textContent = config.hero.subTitle;
+        }
+
+        // Populate Message
+        if (config.message) {
+            if (config.message.title) document.getElementById('msgTitle').textContent = config.message.title;
+            if (config.message.highlightLead) document.getElementById('msgLead').innerHTML = config.message.highlightLead;
+            if (config.message.description) document.getElementById('msgDesc').textContent = config.message.description;
+            if (config.message.modakTitle) document.getElementById('modakTitle').textContent = config.message.modakTitle;
+            if (config.message.modakSubtitle) document.getElementById('modakSub').textContent = config.message.modakSubtitle;
+        }
+
+        // Populate Family
+        if (config.family) {
+            if (config.family.title) document.getElementById('familyCardTitle').textContent = config.family.title;
+            if (config.family.badge) document.getElementById('familyBadge').textContent = config.family.badge;
+            if (config.family.familyName || config.family.hostName) {
+                document.getElementById('familyNames').innerHTML = `
+                    ${config.family.familyName || ''}<br>
+                    <span style="font-size: 1.35rem; color: var(--gold-light); font-weight: 700;">
+                        ${config.family.hostName || ''}
+                    </span>
+                `;
+            }
+            if (config.family.subtext) document.getElementById('familySubtext').textContent = config.family.subtext;
+        }
+
+        // Populate Schedule
+        if (config.schedule && Array.isArray(config.schedule)) {
+            const listEl = document.getElementById('scheduleList');
+            if (listEl) {
+                listEl.innerHTML = config.schedule.map(item => `
+                    <div class="schedule-item">
+                        <div class="schedule-icon">${item.icon || '🌸'}</div>
+                        <div class="schedule-info">
+                            <h4>${item.title || ''}</h4>
+                            <p>${item.details || ''}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Populate Satyanarayana Pooja
+        if (config.pooja) {
+            const poojaSec = document.getElementById('pooja-section');
+            if (config.pooja.showSection === false && poojaSec) {
+                poojaSec.style.display = 'none';
+            } else {
+                if (config.pooja.title) document.getElementById('poojaTitle').textContent = config.pooja.title;
+                if (config.pooja.description) document.getElementById('poojaDesc').textContent = config.pooja.description;
+                if (config.pooja.date) document.getElementById('poojaDate').textContent = config.pooja.date;
+                if (config.pooja.time) document.getElementById('poojaTime').textContent = config.pooja.time;
+                if (config.pooja.prasadTime) document.getElementById('poojaPrasad').textContent = config.pooja.prasadTime;
+                if (config.pooja.inviteNote) document.getElementById('poojaNote').textContent = config.pooja.inviteNote;
+            }
+        }
+
+        // Populate Venue & Contact
+        if (config.venue) {
+            if (config.venue.title) document.getElementById('venueTitle').textContent = config.venue.title;
+            const addressHtml = [
+                config.venue.addressLine1 ? `<strong>${config.venue.addressLine1}</strong>` : '',
+                config.venue.addressLine2 || '',
+                config.venue.addressLine3 || ''
+            ].filter(Boolean).join('<br>');
+            document.getElementById('venueAddress').innerHTML = addressHtml;
+
+            if (config.venue.mapsQuery) {
+                document.getElementById('mapBtn').href = `https://maps.google.com/?q=${encodeURIComponent(config.venue.mapsQuery)}`;
+            }
+            if (config.venue.phone) {
+                document.getElementById('callBtn').href = `tel:${config.venue.phone}`;
+            }
+        }
+
+        // Populate Images
+        if (config.images) {
+            if (config.images.ganeshIdol) document.getElementById('ganeshImg').src = config.images.ganeshIdol;
+            if (config.images.familyPhoto) document.getElementById('familyImg').src = config.images.familyPhoto;
+            if (config.images.poojaThali) document.getElementById('poojaImg').src = config.images.poojaThali;
+            if (config.images.modakPhoto) document.getElementById('modakImg').src = config.images.modakPhoto;
+        }
+
+        // Populate Footer
+        if (config.footer) {
+            if (config.footer.quote) document.getElementById('footerQuote').textContent = config.footer.quote;
+            if (config.footer.tagline) document.getElementById('footerTagline').textContent = config.footer.tagline;
+        }
+
+
+        // ====================================================================
+        // 2. 3D TEMPLE DOORS ANIMATION
+        // ====================================================================
+        let isDoorOpened = false;
+        const doorsEl = document.getElementById('doors');
+        const triggerBtn = document.getElementById('doorOpenTrigger');
+
+        function openDoors() {
+            if (isDoorOpened) return;
+            isDoorOpened = true;
+
+            doorsEl.classList.add('door-open');
+            startAudio();
+            triggerScrollReveal();
+
+            setTimeout(() => {
+                doorsEl.style.opacity = '0';
+                doorsEl.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    doorsEl.style.display = 'none';
+                }, 1000);
+            }, 1900);
+        }
+
+        doorsEl.addEventListener('click', openDoors);
+        if (triggerBtn) {
+            triggerBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openDoors();
+            });
+        }
+
+        window.addEventListener('wheel', (e) => {
+            if (!isDoorOpened && e.deltaY > 15) openDoors();
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDoorOpened) openDoors();
+        }, { passive: true });
+
+
+        // ====================================================================
+        // 3. SCROLL REVEAL INTERSECTION OBSERVER
+        // ====================================================================
+        function triggerScrollReveal() {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    root: null,
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                revealElements.forEach(el => observer.observe(el));
+            } else {
+                function checkVisibility() {
+                    const winHeight = window.innerHeight;
+                    revealElements.forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.top <= winHeight * 0.88) {
+                            el.classList.add('visible');
+                        }
+                    });
+                }
+                window.addEventListener('scroll', checkVisibility, { passive: true });
+                checkVisibility();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            triggerScrollReveal();
+        });
+        triggerScrollReveal();
+
+
+        // ====================================================================
+        // 4. SCROLL HELPER & SCROLL-TO-TOP BUTTON
+        // ====================================================================
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        }, { passive: true });
+
+
+        // ====================================================================
+        // 5. LIVE COUNTDOWN TIMER
+        // ====================================================================
+        function updateCountdown() {
+            const targetDateStr = (config.hero && config.hero.countdownDate) ? config.hero.countdownDate : 'September 14, 2026 09:00:00';
+            const eventDate = new Date(targetDateStr).getTime();
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('cd-days').textContent = days;
+                document.getElementById('cd-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('cd-minutes').textContent = minutes.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdown').innerHTML = '<div style="color: #fff; font-weight: 700; padding: 5px 15px;">|| बाप्पाचे आगमन झाले आहे! ||</div>';
+            }
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+
+        // ====================================================================
+        // 6. DEVOTIONAL AARTI & TEMPLE BELL AUDIO ENGINE
+        // ====================================================================
+        let audioCtx = null;
+        let isAudioPlaying = false;
+        let aartiAudio = null;
+        let synthInterval = null;
+        const audioBtn = document.getElementById('audioToggle');
+
+        const aartiNotes = [
+            { f: 261.63, d: 0.35 }, { f: 293.66, d: 0.35 }, { f: 329.63, d: 0.35 }, { f: 392.00, d: 0.5 },
+            { f: 392.00, d: 0.35 }, { f: 329.63, d: 0.35 }, { f: 293.66, d: 0.35 }, { f: 261.63, d: 0.6 },
+            { f: 293.66, d: 0.35 }, { f: 329.63, d: 0.35 }, { f: 392.00, d: 0.5 }, { f: 349.23, d: 0.35 },
+            { f: 329.63, d: 0.35 }, { f: 293.66, d: 0.6 }
+        ];
+
+        function playSynthesizedAarti() {
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                let noteIndex = 0;
+                function playNextNote() {
+                    if (!isAudioPlaying) return;
+                    const note = aartiNotes[noteIndex % aartiNotes.length];
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(note.f, audioCtx.currentTime);
+
+                    gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.18, audioCtx.currentTime + 0.05);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + note.d);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+
+                    osc.start(audioCtx.currentTime);
+                    osc.stop(audioCtx.currentTime + note.d + 0.05);
+
+                    if (noteIndex % 4 === 0) {
+                        playTempleBellChime(audioCtx);
+                    }
+
+                    noteIndex++;
+                    synthInterval = setTimeout(playNextNote, (note.d + 0.08) * 1000);
+                }
+                playNextNote();
+            } catch(e) {
+                console.log('Synth error:', e);
+            }
+        }
+
+        function playTempleBellChime(ctx) {
+            const bellFreqs = [523.25, 659.25, 783.99, 1046.5];
+            bellFreqs.forEach((freq, idx) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+
+                gain.gain.setValueAtTime(0.001, ctx.currentTime + idx * 0.08);
+                gain.gain.exponentialRampToValueAtTime(0.12 / (idx + 1), ctx.currentTime + idx * 0.08 + 0.04);
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + idx * 0.08 + 2.5);
+
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(ctx.currentTime + idx * 0.08);
+                osc.stop(ctx.currentTime + idx * 0.08 + 2.6);
+            });
+        }
+
+        function startAudio() {
+            if (isAudioPlaying) return;
+            const audioCfg = config.audio || {};
+            if (audioCfg.enableMusic === false) return;
+
+            isAudioPlaying = true;
+            audioBtn.classList.add('playing');
+            audioBtn.textContent = '🔊';
+
+            const audioFile = audioCfg.audioFile || "aarti.mp3";
+            if (!aartiAudio) {
+                aartiAudio = new Audio(audioFile);
+                aartiAudio.loop = audioCfg.loop !== false;
+                aartiAudio.volume = audioCfg.volume || 0.75;
+            }
+
+            const playPromise = aartiAudio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    playSynthesizedAarti();
+                });
+            }
+        }
+
+        function stopAudio() {
+            isAudioPlaying = false;
+            audioBtn.classList.remove('playing');
+            audioBtn.textContent = '🔇';
+            if (aartiAudio) aartiAudio.pause();
+            if (synthInterval) {
+                clearTimeout(synthInterval);
+                synthInterval = null;
+            }
+        }
+
+        audioBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isAudioPlaying) {
+                stopAudio();
+            } else {
+                startAudio();
+            }
+        });
+
+
+        // ====================================================================
+        // 7. FESTIVE PARTICLES: FALLING MARIGOLD PETALS & UKADICHE MODAKS
+        // ====================================================================
+        const canvas = document.getElementById('festive-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }, { passive: true });
+
+        const particles = [];
+        const petalColors = ['#ff9900', '#ffb700', '#ff5722', '#ffcc00', '#ffd700'];
+
+        function drawModak(ctx, size) {
+            ctx.beginPath();
+            ctx.moveTo(0, -size);
+            ctx.bezierCurveTo(size * 0.45, -size * 0.45, size * 0.85, size * 0.35, size * 0.65, size * 0.8);
+            ctx.bezierCurveTo(size * 0.3, size * 0.95, -size * 0.3, size * 0.95, -size * 0.65, size * 0.8);
+            ctx.bezierCurveTo(-size * 0.85, size * 0.35, -size * 0.45, -size * 0.45, 0, -size);
+            ctx.closePath();
+
+            const grad = ctx.createLinearGradient(-size, -size, size, size);
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(0.5, '#fff9e6');
+            grad.addColorStop(1, '#ebdcb9');
+            ctx.fillStyle = grad;
+            ctx.fill();
+
+            ctx.strokeStyle = 'rgba(212, 175, 55, 0.5)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(0, -size);
+            ctx.lineTo(0, size * 0.85);
+            ctx.moveTo(0, -size);
+            ctx.quadraticCurveTo(size * 0.28, 0, size * 0.35, size * 0.75);
+            ctx.moveTo(0, -size);
+            ctx.quadraticCurveTo(-size * 0.28, 0, -size * 0.35, size * 0.75);
+            ctx.strokeStyle = 'rgba(180, 140, 60, 0.35)';
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(0, -size);
+            ctx.lineTo(size * 0.12, -size * 1.25);
+            ctx.strokeStyle = '#e65100';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+        }
+
+        for (let i = 0; i < 38; i++) {
+            const isModak = i % 4 === 0;
+            particles.push({
+                type: isModak ? 'modak' : 'petal',
+                x: Math.random() * width,
+                y: Math.random() * height - height,
+                size: isModak ? (Math.random() * 6 + 10) : (Math.random() * 8 + 6),
+                color: petalColors[Math.floor(Math.random() * petalColors.length)],
+                speedY: Math.random() * 1.4 + 0.7,
+                speedX: Math.random() * 1.2 - 0.6,
+                angle: Math.random() * 360,
+                spinSpeed: Math.random() * 1.8 - 0.9,
+                opacity: Math.random() * 0.55 + 0.35
+            });
+        }
+
+        function renderFestiveCanvas() {
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach(p => {
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate((p.angle * Math.PI) / 180);
+                ctx.globalAlpha = p.opacity;
+
+                if (p.type === 'modak') {
+                    drawModak(ctx, p.size);
+                } else {
+                    ctx.fillStyle = (currentActiveTheme === 'royal-maroon' && p.size % 2 === 0) ? '#ff2a4b' : p.color;
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.restore();
+
+                p.y += p.speedY;
+                p.x += Math.sin(p.y * 0.01) * 0.7 + p.speedX;
+                p.angle += p.spinSpeed;
+
+                if (p.y > height + 25) {
+                    p.y = -25;
+                    p.x = Math.random() * width;
+                }
+            });
+
+            requestAnimationFrame(renderFestiveCanvas);
+        }
+        renderFestiveCanvas();
+
+
+        // ====================================================================
+        // 8. 1-CLICK WHATSAPP SHARE & GOOGLE CALENDAR
+        // ====================================================================
+        function shareOnWhatsApp() {
+            const hostInfo = (config.family && config.family.hostName) ? config.family.hostName : 'राऊत परिवार';
+            const familyInfo = (config.family && config.family.familyName) ? `(${config.family.familyName})` : '';
+            const venueStr = (config.venue && config.venue.addressLine1) ? `${config.venue.addressLine1} ${config.venue.addressLine2 || ''}` : 'रेवदंडा - अलिबाग';
+            const poojaDateStr = (config.pooja && config.pooja.date) ? config.pooja.date : '१८ सप्टेंबर २०२६';
+
+            const message = encodeURIComponent(
+                "🌸 *|| श्री गणेशाय नमः ||* 🌸\n\n" +
+                "आमच्या घरी लाडक्या गणपती बाप्पाचे आगमन होत आहे! 🙏🌿\n\n" +
+                "📅 *गणेश स्थापना:* १४ सप्टेंबर २०२६\n" +
+                `🪔 *सत्यनारायण महापूजा:* ${poojaDateStr}\n` +
+                "🕉️ *विसर्जन मिरवणूक:* १९ सप्टेंबर २०२६\n" +
+                `👨‍👩‍👧‍👦 *निमंत्रक:* ${hostInfo} ${familyInfo}\n` +
+                `📍 *स्थळ:* ${venueStr}\n\n` +
+                "आपण सपरिवार उपस्थित राहून बाप्पाचा आशीर्वाद, उकडीचे मोदक व महाप्रसाद घ्यावा ही नम्र विनंती!\n\n" +
+                "👇 डिजिटल निमंत्रण पत्रिका येथे पहा:\n" + window.location.href
+            );
+            window.open(`https://api.whatsapp.com/send?text=${message}`, '_blank');
+        }
+
+        function addToCalendar() {
+            const hostInfo = (config.family && config.family.hostName) ? config.family.hostName : 'राऊत परिवार';
+            const venueStr = (config.venue && config.venue.addressLine1) ? `${config.venue.addressLine1}, ${config.venue.addressLine2 || ''}` : 'रेवदंडा - अलिबाग';
+            const title = encodeURIComponent(`श्री गणेशोत्सव व सत्यनारायण महापूजा - ${hostInfo}`);
+            const details = encodeURIComponent(`गणेश स्थापना (१४ सप्टें), सत्यनारायण पूजा (१८ सप्टें) व विसर्जन (१९ सप्टें). निमंत्रक: ${hostInfo}. स्थळ: ${venueStr}.`);
+            const location = encodeURIComponent(venueStr);
+            const startDate = "20260914T090000";
+            const endDate = "20260919T200000";
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+            window.open(calendarUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
