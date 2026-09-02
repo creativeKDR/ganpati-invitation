@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Gotu&family=Mukta:wght@300;400;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Central Configuration File -->
-    <script src="config.js"></script>
+    <!-- Central Configuration File (Supports both scripts/ and root) -->
+    <script src="scripts/config.js"></script>
+    <script>if (!window.INVITATION_CONFIG) { document.write('<script src="config.js"><\/script>'); }</script>
 
     <style>
         /* ==========================================================================
@@ -35,7 +36,7 @@
             --text-sub: #dcedc8;
             --shadow-accent: rgba(242, 201, 76, 0.45);
             --door-bg: linear-gradient(145deg, #420808 0%, #1a0202 100%);
-            --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.9) 0%, rgba(255, 150, 0, 0.55) 45%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.95) 0%, rgba(255, 150, 0, 0.6) 45%, transparent 75%);
             --font-title: 'Rozha One', 'Tiro Devanagari Marathi', serif;
             --icon-glow: 0 0 16px rgba(242, 201, 76, 0.8);
             --arch-filter: drop-shadow(0 15px 25px rgba(0,0,0,0.85)) drop-shadow(0 0 25px rgba(242, 201, 76, 0.6));
@@ -124,7 +125,7 @@
             --text-sub: #5c3b24;
             --shadow-accent: rgba(179, 130, 26, 0.4);
             --door-bg: linear-gradient(145deg, #3d0606 0%, #170101 100%);
-            --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.85) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.9) 0%, rgba(255, 248, 220, 0.6) 50%, transparent 75%);
             --font-title: 'Tiro Devanagari Marathi', 'Rozha One', serif;
             --icon-glow: 0 0 15px rgba(212, 175, 55, 0.7);
             --arch-filter: drop-shadow(0 15px 25px rgba(120, 90, 40, 0.35)) drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
@@ -569,7 +570,7 @@
         .temple-mandap {
             position: relative;
             width: 100%;
-            max-width: 620px;
+            max-width: 650px;
             margin: 15px auto 20px auto;
             display: flex;
             flex-direction: column;
@@ -590,7 +591,7 @@
         .ghanta-wrapper {
             position: relative;
             width: 75px;
-            height: 290px;
+            height: 310px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -632,8 +633,8 @@
             flex-direction: column;
             align-items: center;
         }
-        .samai-left { left: 75px; }
-        .samai-right { right: 75px; }
+        .samai-left { left: 80px; }
+        .samai-right { right: 80px; }
 
         .diya-flame {
             font-size: 1.8rem;
@@ -651,11 +652,11 @@
             100% { transform: scale(0.95) rotate(-1deg); opacity: 0.92; }
         }
 
-        /* 3D GANESHA SHRINE (STEADY & STABLE) */
+        /* 3D GANESHA SHRINE (STEADY, STABLE, PROPORTIONATELY SIZED WITH SPACE) */
         .ganesha-3d-wrapper {
             position: relative;
-            width: 330px;
-            height: 450px;
+            width: 360px;
+            height: 490px;
             margin: 0 auto;
             z-index: 10;
             display: flex;
@@ -664,19 +665,19 @@
             /* STEADY & STABLE: No floating animation */
         }
 
-        /* The Transparent Cutout Ganesha Idol */
+        /* The Transparent Cutout Ganesha Idol - Centered with clean breathing margins */
         .ganesha-img {
             position: absolute;
-            width: 66%;
-            height: 66%;
-            top: 24%;
-            left: 17%;
+            width: 52%;
+            height: 52%;
+            top: 29%;
+            left: 24%;
             object-fit: contain;
             z-index: 2;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.95)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.95)) drop-shadow(0 0 18px rgba(255, 215, 0, 0.45));
             display: block;
             pointer-events: none;
-            transition: all 0.5s ease;
+            transition: all 0.4s ease;
         }
 
         /* The Authentic Carved Brass / Gold Temple Arch Overlay */
@@ -690,7 +691,7 @@
             z-index: 5;
             pointer-events: none;
             filter: var(--arch-filter);
-            transition: all 0.5s ease;
+            transition: all 0.4s ease;
         }
 
         /* ROTATING DIVINE HALO AURA (सुदर्शन प्रभावळ - ANIMATED BEHIND STEADY GANESHA) */
@@ -1276,8 +1277,8 @@
             .card-title { font-size: 1.85rem; }
             .text-large { font-size: 1.25rem; }
             .text-medium { font-size: 1.1rem; }
-            .ganesha-3d-wrapper { width: 280px; height: 380px; }
-            .ghanta-wrapper { width: 50px; height: 210px; }
+            .ganesha-3d-wrapper { width: 300px; height: 410px; }
+            .ghanta-wrapper { width: 50px; height: 230px; }
             .samai-container { display: none; }
             .section { padding: 50px 15px; min-height: 75vh; }
             .door-hint-title { font-size: 1.8rem; }
@@ -1360,7 +1361,7 @@
                         
                         <!-- Left Hanging Brass Ghanta Bell with Chain -->
                         <div class="ghanta-wrapper ghanta-left" id="ghantaLeft" title="घंटा वाजवा (Ring Bell)">
-                            <img src="bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
+                            <img src="images/bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
                         </div>
 
                         <!-- Left Brass Diya Samai -->
@@ -1373,10 +1374,10 @@
                         <div class="ganesha-3d-wrapper" id="ganeshaWrapper">
                             <!-- Rotating Divine Halo (Animated) -->
                             <div class="divine-halo-wheel" id="divineHalo"></div>
-                            <!-- Transparent Cutout Lord Ganesha Idol (Steady & Stable) -->
-                            <img src="ganesh.png" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
+                            <!-- Transparent Cutout Lord Ganesha Idol (Steady & Centered with Breathing Room) -->
+                            <img src="images/ganesh.png" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
                             <!-- High-Res Transparent Prabhavali Temple Arch Overlay (Steady & Stable) -->
-                            <img src="temple_arch.png" id="templeArchOverlay" alt="मंदिर प्रभावळ मखर" class="prabhavali-arch-overlay">
+                            <img src="images/temple_arch.png" id="templeArchOverlay" alt="मंदिर प्रभावळ मखर" class="prabhavali-arch-overlay">
                         </div>
 
                         <!-- Right Brass Diya Samai -->
@@ -1387,7 +1388,7 @@
 
                         <!-- Right Hanging Brass Ghanta Bell with Chain -->
                         <div class="ghanta-wrapper ghanta-right" id="ghantaRight" title="घंटा वाजवा (Ring Bell)">
-                            <img src="bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
+                            <img src="images/bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
                         </div>
                     </div>
 
@@ -1445,7 +1446,7 @@
                 <div class="modak-showcase" id="modakShowcase">
                     <div class="modak-thumb-wrapper">
                         <span class="steam-bubble">♨️</span>
-                        <img src="modak.jpg" id="modakImg" alt="उकडीचे मोदक" class="modak-thumb-img">
+                        <img src="images/modak.jpg" id="modakImg" alt="उकडीचे मोदक" class="modak-thumb-img">
                     </div>
                     <div class="modak-text">
                         <span id="modakTitle" style="font-size: 1.25rem; font-weight: 700; color: var(--gold-light);">गरमागरम उकडीचे मोदक व महाप्रसाद</span>
@@ -1466,7 +1467,7 @@
                 <h2 class="card-title" id="familyCardTitle">निमंत्रक परिवार</h2>
 
                 <div class="photo-container">
-                    <img src="family.jpg" id="familyImg" alt="आमचे कुटुंब" class="family-photo">
+                    <img src="images/family.jpg" id="familyImg" alt="आमचे कुटुंब" class="family-photo">
                     <div class="family-badge" id="familyBadge">✨ राऊत परिवार ✨</div>
                 </div>
                 
@@ -1511,7 +1512,7 @@
                 <div class="corner bottom-left corner-symbol" style="color: var(--gold-light);">❋</div>
                 <div class="corner bottom-right corner-symbol" style="color: var(--gold-light);">❋</div>
                 
-                <img src="pooja.jpg" id="poojaImg" alt="पूजा थाळी" class="pooja-img">
+                <img src="images/pooja.jpg" id="poojaImg" alt="पूजा थाळी" class="pooja-img">
                 
                 <h2 class="card-title" id="poojaTitle">विशेष श्री सत्यनारायण महापूजा</h2>
                 
@@ -1617,7 +1618,7 @@
                 scheduleIcon: '🌺',
                 emblem: '卐',
                 diya: '🪔',
-                archImg: 'temple_arch.png'
+                archImg: 'images/temple_arch.png'
             },
             'royal-maroon': {
                 leaf: '⚜️',
@@ -1627,7 +1628,7 @@
                 scheduleIcon: '🌹',
                 emblem: '👑',
                 diya: '🏮',
-                archImg: 'temple_arch_royal.png'
+                archImg: 'images/temple_arch_royal.png'
             },
             'sunset-saffron': {
                 leaf: '✨',
@@ -1637,7 +1638,7 @@
                 scheduleIcon: '🔥',
                 emblem: '☀️',
                 diya: '🪔',
-                archImg: 'temple_arch.png'
+                archImg: 'images/temple_arch.png'
             },
             'temple-ivory': {
                 leaf: '🌿',
@@ -1647,7 +1648,7 @@
                 scheduleIcon: '🏵️',
                 emblem: 'ॐ',
                 diya: '🪔',
-                archImg: 'temple_arch_ivory.png'
+                archImg: 'images/temple_arch_ivory.png'
             },
             'celestial-midnight': {
                 leaf: '✦',
@@ -1657,7 +1658,7 @@
                 scheduleIcon: '⭐',
                 emblem: '🌙',
                 diya: '💎',
-                archImg: 'temple_arch_celestial.png'
+                archImg: 'images/temple_arch_celestial.png'
             },
             'lotus-blush': {
                 leaf: '🌸',
@@ -1667,7 +1668,7 @@
                 scheduleIcon: '🌺',
                 emblem: '🪷',
                 diya: '🪷',
-                archImg: 'temple_arch_lotus.png'
+                archImg: 'images/temple_arch_lotus.png'
             }
         };
 
@@ -1718,10 +1719,11 @@
             if (diyaLeft) diyaLeft.textContent = tData.diya;
             if (diyaRight) diyaRight.textContent = tData.diya;
 
-            // Update Ornate Prabhavali Arch Image
+            // Update Ornate Prabhavali Arch Image with clean fallback
             const archOverlay = document.getElementById('templeArchOverlay');
             if (archOverlay) {
-                archOverlay.src = (config.images && config.images.templeArch) ? config.images.templeArch : tData.archImg;
+                const customArch = config.images && config.images.templeArch;
+                archOverlay.src = customArch ? customArch : tData.archImg;
             }
         }
 
@@ -2042,7 +2044,7 @@
             audioBtn.classList.add('playing');
             audioBtn.textContent = '🔊';
 
-            const audioFile = audioCfg.audioFile || "aarti.mp3";
+            const audioFile = audioCfg.audioFile || "audio/aarti.mp3";
             if (!aartiAudio) {
                 aartiAudio = new Audio(audioFile);
                 aartiAudio.loop = audioCfg.loop !== false;

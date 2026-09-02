@@ -1,6 +1,6 @@
 # 🌸 Digital Ganpati Invitation Template (गणेशोत्सव निमंत्रण पत्रिका टेम्पलेट)
 
-A reusable, responsive, 3D animated Marathi Ganesh Festival digital invitation with 6 switchable themes, rotating divine aura halo, shimmering gold typography, live countdown timer, temple reveal, devotional Aarti music audio engine, falling modaks & multi-theme particle physics, WhatsApp sharing, and Google Calendar sync.
+A reusable, responsive, Marathi Ganesh Festival digital invitation with 6 switchable themes, transparent Ganesha idol cutout, authentic Prabhavali temple arch overlay, swinging brass Ghantas (temple bells) with golden chains, rotating divine aura halo, shimmering gold typography, live countdown timer, devotional Aarti music engine, falling festive particle physics, WhatsApp sharing, and Google Calendar sync.
 
 ---
 
@@ -15,56 +15,36 @@ You can switch themes with 1 click:
 
 ---
 
-## ✨ Advanced Animations & Micro-Interactions
-- **Rotating Divine Halo (सुदर्शन / प्रभावळ)**: Glowing divine light wheel rotating continuously behind Lord Ganesha.
-- **Shimmering Gold Typography**: Flowing light reflection on titles and headings.
-- **Rising Steam on Modak Badge**: Animated steam rising from freshly steamed Ukadiche Modaks.
-- **Interactive Temple Bells**: Clicking or hovering over the bells triggers chime soundwaves.
-- **Multi-Theme Particle Physics**: Custom particles for each theme (e.g. twinkling stars for Celestial, pink lotus petals for Lotus Blush, rose petals for Royal Maroon, marigold for Banana Leaf).
+## 📁 Clean Folder Structure (सुव्यवस्थित फोल्डर रचना)
+```text
+├── index.html                  # Main Invitation Webpage
+├── invite.html                 # Direct Mirror of Main Page
+├── builder.html                # Interactive Visual Builder Dashboard
+├── README.md                   # Documentation
+│
+├── images/                     # 🖼️ All Image Assets
+│   ├── ganesh.png              # Transparent Cutout Lord Ganesha Idol
+│   ├── ganesh.jpg              # Original Ganesha Photo
+│   ├── bell.png                # Hanging Brass Temple Bell with Chain
+│   ├── temple_arch.png         # Traditional 24K Gold Prabhavali Temple Arch
+│   ├── temple_arch_royal.png   # Royal Maroon Velvet Gold Arch
+│   ├── temple_arch_saffron.png # Sunset Saffron Amber Arch
+│   ├── temple_arch_ivory.png   # Platinum Ivory Temple Arch
+│   ├── temple_arch_celestial.png # Cosmic Starlight Blue Arch
+│   ├── temple_arch_lotus.png   # Rose Gold Lotus Arch
+│   ├── family.jpg              # Family Photo
+│   ├── pooja.jpg               # Satyanarayana Pooja Photo
+│   └── modak.jpg               # Ukadiche Modak Photo
+│
+├── scripts/                    # 📜 JavaScript Configuration
+│   └── config.js               # Master Config for Text, Dates, Venue & Theme
+│
+└── audio/                      # 🎵 Audio Files
+    └── aarti.mp3               # Background Devotional Aarti MP3
+```
 
 ---
 
-## 🎵 Devotional Aarti & Background Music (आरती व संगीत)
-- **Custom Aarti MP3**: Place any MP3 audio file named **`aarti.mp3`** in the project folder.
-- **Built-in Fallback Synth**: If no external MP3 is added, the webpage automatically plays a built-in devotional Aarti melody + temple bells using Web Audio API!
-- **Interactive Audio Controller**: Floating `🔊` button allows guests to toggle music on/off.
-
----
-
-## 🚀 How to Create a New Client Invitation (२ सोपे पर्याय)
-
-### Option 1: Using the Visual Builder (सर्वात सोपे - Graphical UI)
-1. Double-click to open **`builder.html`** in any browser.
-2. Pick a theme from the 6 options, fill in family details, dates, address, and audio settings.
-3. Check the instant live preview on mobile or desktop view.
-4. Click **"💾 Download config.js"** and replace the existing `config.js` file in the folder.
-5. Done! Open `index.html` to see the final invitation.
-
-### Option 2: By Editing `config.js` Directly
-1. Open **`config.js`** in any text editor (Notepad, VS Code, etc.).
-2. Change:
-   - `theme: 'banana-leaf'` (or `'royal-maroon'`, `'sunset-saffron'`, `'temple-ivory'`, `'celestial-midnight'`, `'lotus-blush'`)
-   - `family.familyName` & `family.hostName`
-   - `schedule` dates & times
-   - `audio.audioFile` (e.g. `'aarti.mp3'`)
-   - `venue` address & Google Maps link
-   - `images` filenames (`ganesh.jpg`, `family.jpg`, `pooja.jpg`, `modak.jpg`)
-3. Save the file. That's it!
-
----
-
-## 📁 Project Structure
-- `index.html` — The main digital invitation landing page (GitHub Pages & Netlify ready)
-- `builder.html` — Interactive visual template builder & customizer dashboard
-- `config.js` — Central configuration file for all text, dates, images, audio, and themes
-- `ganesh.jpg` — Lord Ganesha Idol photo
-- `family.jpg` — Host / Family photo
-- `pooja.jpg` — Satyanarayana Pooja setup photo
-- `modak.jpg` — Authentic Ukadiche Modak photo
-- `aarti.mp3` — (Optional) Custom Aarti / Devotional song audio file
-
----
-
-## 🌐 Free 1-Click Deployment (फ्री होस्टिंग)
-- **Netlify Drop**: Drag and drop this folder onto [app.netlify.com/drop](https://app.netlify.com/drop) for an instant live link.
-- **GitHub Pages**: Push this folder to a GitHub repository and turn on Pages in repository settings.
+## 🚀 How to Customize
+1. **Visual Builder**: Open `builder.html` in your browser, pick a theme, update client details, and download the new `config.js` into the `scripts/` folder.
+2. **Direct Edit**: Open `scripts/config.js` in any text editor to update dates, names, address, or images.
