@@ -117,7 +117,8 @@ const INVITATION_CONFIG = {
         ganeshIdol: "ganesh.jpg",
         familyPhoto: "family.jpg",
         poojaThali: "pooja.jpg",
-        modakPhoto: "modak.jpg"
+        modakPhoto: "modak.jpg",
+        templeArch: "" // Optional custom arch overlay PNG, if empty theme default is used
     },
 
     // ----------------------------------------------------------------
