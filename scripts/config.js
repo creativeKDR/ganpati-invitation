@@ -70,18 +70,18 @@ const INVITATION_CONFIG = {
                 badge: "✨ मुख्य निमंत्रक ✨"
             },
             {
-                name: "सौ. प्रणाली कल्पेश राऊत",
+                name: "श्री. दिनेश राऊत",
                 role: "सहनिमंत्रक (Co-Host)",
                 relation: "सहनिमंत्रक",
                 photo: "images/family.jpg",
                 badge: "✨ सस्नेह निमंत्रण ✨"
             },
             {
-                name: "चि. वेदांत कल्पेश राऊत",
+                name: "कु. वेदिका भरत घरत",
                 role: "कुटुंब सदस्य",
-                relation: "सुपुत्र",
+                relation: "भाची",
                 photo: "images/family.jpg",
-                badge: "✨ बाप्पाचा लाडका भक्त ✨"
+                badge: "✨ बाप्पाची लाडकी भक्त ✨"
             },
             {
                 name: "समस्त राऊत परिवार",
@@ -132,13 +132,13 @@ const INVITATION_CONFIG = {
     // ----------------------------------------------------------------
     venue: {
         title: "पत्ता व स्थळ",
-        addressLine1: "२०२, स्नेहकुंज अपार्टमेंट,",
+        addressLine1: "२०२, अपोलो अपार्टमेंट,",
         addressLine2: "रेवदंडा - अलिबाग,",
         addressLine3: "जि. रायगड",
         // Google Maps Search Query (Location name)
-        mapsQuery: "Snehkunj Apartment Revdanda Alibag",
+        mapsQuery: "Apollo Apartment Revdanda Alibag",
         // Host Contact Phone Number
-        phone: "+919876543210"
+        phone: "+911234567890"
     },
 
     // ----------------------------------------------------------------
