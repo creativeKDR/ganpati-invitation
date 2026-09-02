@@ -1219,11 +1219,125 @@
             font-weight: 400;
         }
 
-        /* FAMILY SECTION */
+        /* FAMILY SECTION & INTERACTIVE SWIPE CAROUSEL */
+        .family-carousel-container {
+            position: relative;
+            width: 100%;
+            margin: 10px auto 5px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: pan-y;
+            user-select: none;
+        }
+
+        .family-carousel-track-wrapper {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+
+        .family-carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+            will-change: transform;
+        }
+
+        .family-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 4px 10px 4px;
+        }
+
+        .carousel-nav-btn {
+            position: absolute;
+            top: 42%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(8px);
+            border: 2px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 25;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 12px var(--shadow-accent);
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .carousel-nav-btn:hover {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+            color: #000;
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        .carousel-nav-btn.prev-btn {
+            left: -8px;
+        }
+
+        .carousel-nav-btn.next-btn {
+            right: -8px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+
+        .carousel-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: rgba(255, 215, 0, 0.25);
+            border: 1.5px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            width: 28px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright));
+            box-shadow: 0 0 10px var(--gold-bright);
+        }
+
+        .swipe-hint {
+            font-size: 0.88rem;
+            color: var(--gold-light);
+            margin-top: 6px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            animation: pulseHint 2.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseHint {
+            0% { opacity: 0.6; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1.02); }
+        }
+
         .photo-container {
             position: relative;
-            margin: 15px auto 25px auto;
+            margin: 10px auto 22px auto;
             max-width: 92%;
+            width: 100%;
             padding: 12px;
             background: rgba(0, 0, 0, 0.5);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
@@ -1259,8 +1373,8 @@
             background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
             color: #1a0f00;
             font-weight: 800;
-            font-size: 1rem;
-            padding: 6px 22px;
+            font-size: 0.95rem;
+            padding: 6px 20px;
             border-radius: 20px;
             border: 2px solid #fff;
             white-space: nowrap;
@@ -1271,16 +1385,18 @@
             font-size: 1.55rem;
             font-weight: 700;
             color: var(--gold-light);
-            margin-top: 25px;
+            margin-top: 20px;
             line-height: 1.6;
             font-family: 'Tiro Devanagari Marathi', serif;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
 
         .family-subtext {
             font-size: 1.15rem;
             color: var(--text-sub);
             margin-top: 8px;
+            text-align: center;
         }
 
         /* SCHEDULE TIMELINE WITH SPARKLE ICONS */
@@ -1742,7 +1858,7 @@
             </div>
         </section>
 
-        <!-- SECTION 2: FAMILY DETAILS -->
+        <!-- SECTION 2: FAMILY DETAILS WITH SWIPE CAROUSEL -->
         <section class="section" id="family-section">
             <div class="scroll-reveal leaf-card">
                 <div class="corner top-left corner-symbol">❀</div>
@@ -1750,20 +1866,43 @@
                 <div class="corner bottom-left corner-symbol">❀</div>
                 <div class="corner bottom-right corner-symbol">❀</div>
 
+                <div class="card-header-icon" id="familyHeaderIcon">👨‍👩‍👧‍👦</div>
                 <h2 class="card-title" id="familyCardTitle">निमंत्रक परिवार</h2>
 
-                <div class="photo-container">
-                    <img src="images/family.jpg" id="familyImg" alt="आमचे कुटुंब" class="family-photo">
-                    <div class="family-badge" id="familyBadge">✨ राऊत परिवार ✨</div>
+                <!-- SWIPEABLE FAMILY CAROUSEL -->
+                <div class="family-carousel-container" id="familyCarouselContainer">
+                    <button class="carousel-nav-btn prev-btn" id="prevFamilyBtn" aria-label="मागील सदस्य" onclick="prevFamilySlide()">‹</button>
+
+                    <div class="family-carousel-track-wrapper" id="familyTrackWrapper">
+                        <div class="family-carousel-track" id="familyCarouselTrack">
+                            <!-- Populated dynamically via config.family.members -->
+                            <div class="family-slide">
+                                <div class="photo-container">
+                                    <img src="images/family.jpg" id="familyImg" alt="आमचे कुटुंब" class="family-photo">
+                                    <div class="family-badge" id="familyBadge">✨ राऊत परिवार ✨</div>
+                                </div>
+                                <div class="family-names" id="familyNames">
+                                    राऊत परिवार<br>
+                                    <span style="font-size: 1.35rem; color: var(--gold-light); font-weight: 700;">
+                                        निमंत्रक: श्री. कल्पेश राऊत
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-nav-btn next-btn" id="nextFamilyBtn" aria-label="पुढील सदस्य" onclick="nextFamilySlide()">›</button>
                 </div>
 
-                <div class="family-names" id="familyNames">
-                    राऊत परिवार<br>
-                    <span style="font-size: 1.35rem; color: var(--gold-light); font-weight: 700;">
-                        निमंत्रक: श्री. कल्पेश राऊत
-                    </span>
+                <!-- CAROUSEL PAGINATION DOTS -->
+                <div class="carousel-dots" id="familyCarouselDots"></div>
+
+                <!-- SWIPE HINT -->
+                <div class="swipe-hint" id="familySwipeHint">
+                    <span>👈</span> स्वाइप करून इतर सदस्य पहा <span>👉</span>
                 </div>
-                <div class="family-subtext" id="familySubtext">
+
+                <div class="family-subtext" id="familySubtext" style="margin-top: 15px;">
                     आणि समस्त राऊत परिवार आपले सहर्ष स्वागत करीत आहे.
                 </div>
             </div>
@@ -2046,20 +2185,166 @@
             if (config.message.modakSubtitle) document.getElementById('modakSub').textContent = config.message.modakSubtitle;
         }
 
-        // Populate Family
-        if (config.family) {
-            if (config.family.title) document.getElementById('familyCardTitle').textContent = config.family.title;
-            if (config.family.badge) document.getElementById('familyBadge').textContent = config.family.badge;
-            if (config.family.familyName || config.family.hostName) {
-                document.getElementById('familyNames').innerHTML = `
-                    ${config.family.familyName || ''}<br>
-                    <span style="font-size: 1.35rem; color: var(--gold-light); font-weight: 700;">
-                        ${config.family.hostName || ''}
-                    </span>
-                `;
+        // Populate & Initialize Family Carousel
+        let currentFamilySlide = 0;
+        let totalFamilySlides = 1;
+        let familyAutoAdvanceTimer = null;
+
+        function initFamilyCarousel() {
+            const familyCfg = config.family || {};
+            const defaultPhoto = (config.images && config.images.familyPhoto) ? config.images.familyPhoto : 'images/family.jpg';
+            const defaultBadge = familyCfg.badge || '✨ राऊत परिवार ✨';
+
+            if (familyCfg.title) document.getElementById('familyCardTitle').textContent = familyCfg.title;
+            if (familyCfg.subtext) document.getElementById('familySubtext').textContent = familyCfg.subtext;
+
+            let membersList = [];
+            if (familyCfg.members && Array.isArray(familyCfg.members) && familyCfg.members.length > 0) {
+                membersList = familyCfg.members;
+            } else {
+                membersList = [
+                    {
+                        name: familyCfg.familyName || 'राऊत परिवार',
+                        role: familyCfg.hostName || 'निमंत्रक: श्री. कल्पेश राऊत',
+                        photo: defaultPhoto,
+                        badge: defaultBadge
+                    }
+                ];
             }
-            if (config.family.subtext) document.getElementById('familySubtext').textContent = config.family.subtext;
+
+            totalFamilySlides = membersList.length;
+            const trackEl = document.getElementById('familyCarouselTrack');
+            const dotsEl = document.getElementById('familyCarouselDots');
+            const swipeHintEl = document.getElementById('familySwipeHint');
+            const prevBtn = document.getElementById('prevFamilyBtn');
+            const nextBtn = document.getElementById('nextFamilyBtn');
+
+            if (totalFamilySlides <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                if (dotsEl) dotsEl.style.display = 'none';
+                if (swipeHintEl) swipeHintEl.style.display = 'none';
+            }
+
+            if (trackEl) {
+                trackEl.innerHTML = membersList.map((m, idx) => `
+                    <div class="family-slide" data-index="${idx}">
+                        <div class="photo-container">
+                            <img src="${m.photo || defaultPhoto}" alt="${m.name}" class="family-photo">
+                            <div class="family-badge">${m.badge || defaultBadge}</div>
+                        </div>
+                        <div class="family-names">
+                            ${m.name}<br>
+                            <span style="font-size: 1.25rem; color: var(--gold-light); font-weight: 700;">
+                                ${m.role || m.relation || ''}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            if (dotsEl && totalFamilySlides > 1) {
+                dotsEl.innerHTML = membersList.map((_, idx) => `
+                    <div class="carousel-dot ${idx === 0 ? 'active' : ''}" onclick="goToFamilySlide(${idx})"></div>
+                `).join('');
+            }
+
+            updateFamilySlide(0);
+            setupCarouselTouchAndDrag();
+            startFamilyAutoAdvance();
         }
+
+        function updateFamilySlide(index) {
+            currentFamilySlide = (index + totalFamilySlides) % totalFamilySlides;
+            const trackEl = document.getElementById('familyCarouselTrack');
+            if (trackEl) {
+                trackEl.style.transform = `translateX(-${currentFamilySlide * 100}%)`;
+            }
+
+            const dots = document.querySelectorAll('#familyCarouselDots .carousel-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === currentFamilySlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function nextFamilySlide() {
+            updateFamilySlide(currentFamilySlide + 1);
+            resetFamilyAutoAdvance();
+        }
+
+        function prevFamilySlide() {
+            updateFamilySlide(currentFamilySlide - 1);
+            resetFamilyAutoAdvance();
+        }
+
+        function goToFamilySlide(idx) {
+            updateFamilySlide(idx);
+            resetFamilyAutoAdvance();
+        }
+
+        function startFamilyAutoAdvance() {
+            if (totalFamilySlides <= 1) return;
+            stopFamilyAutoAdvance();
+            familyAutoAdvanceTimer = setInterval(() => {
+                updateFamilySlide(currentFamilySlide + 1);
+            }, 4500);
+        }
+
+        function stopFamilyAutoAdvance() {
+            if (familyAutoAdvanceTimer) {
+                clearInterval(familyAutoAdvanceTimer);
+                familyAutoAdvanceTimer = null;
+            }
+        }
+
+        function resetFamilyAutoAdvance() {
+            stopFamilyAutoAdvance();
+            startFamilyAutoAdvance();
+        }
+
+        function setupCarouselTouchAndDrag() {
+            const container = document.getElementById('familyCarouselContainer');
+            if (!container) return;
+
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                currentX = startX;
+                isDragging = true;
+                stopFamilyAutoAdvance();
+            }, { passive: true });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                currentX = e.touches[0].clientX;
+            }, { passive: true });
+
+            container.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                const diffX = startX - currentX;
+                if (Math.abs(diffX) > 40) {
+                    if (diffX > 0) {
+                        nextFamilySlide();
+                    } else {
+                        prevFamilySlide();
+                    }
+                }
+                startFamilyAutoAdvance();
+            }, { passive: true });
+
+            container.addEventListener('mouseenter', stopFamilyAutoAdvance);
+            container.addEventListener('mouseleave', startFamilyAutoAdvance);
+        }
+
+        initFamilyCarousel();
 
         // Populate Schedule
         if (config.schedule && Array.isArray(config.schedule)) {
