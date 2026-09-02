@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">|| श्री गणेशाय नमः || गणपती बाप्पा मोरया | निमंत्रण पत्रिका</title>
     
-    <!-- Google Fonts for Devanagari & Royal Typography -->
+    <!-- Google Fonts for Devanagari, Royal & Celestial Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Cinzel+Decorative:wght@700&family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Gotu&family=Mukta:wght@300;400;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
     
     <!-- Central Configuration File -->
     <script src="config.js"></script>
 
     <style>
         /* ==========================================================================
-           1. CSS DESIGN SYSTEMS FOR 4 DISTINCT THEMES
+           1. CSS DESIGN SYSTEMS FOR 6 DISTINCT THEMES
            ========================================================================== */
         :root {
             /* THEME 1: BANANA LEAF (DEFAULT - केळीचे पान) */
@@ -36,6 +36,8 @@
             --shadow-accent: rgba(242, 201, 76, 0.45);
             --door-bg: linear-gradient(145deg, #420808 0%, #1a0202 100%);
             --pillar-color: linear-gradient(90deg, #996515 0%, #ffd700 45%, #fff3b0 55%, #b8860b 80%, #684200 100%);
+            --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.85) 0%, rgba(255, 150, 0, 0.5) 45%, transparent 75%);
+            --font-title: 'Rozha One', 'Tiro Devanagari Marathi', serif;
         }
 
         /* --------------------------------------------------------------------------
@@ -62,8 +64,9 @@
             --shadow-accent: rgba(255, 215, 0, 0.55);
             --door-bg: linear-gradient(145deg, #420404 0%, #1a0101 100%);
             --pillar-color: linear-gradient(90deg, #6e0c0c 0%, #ffd700 35%, #fff6cc 50%, #c69214 75%, #420606 100%);
+            --halo-color: radial-gradient(circle, rgba(255, 215, 0, 0.9) 0%, rgba(220, 20, 60, 0.6) 50%, transparent 75%);
+            --font-title: 'Rozha One', 'Cinzel Decorative', serif;
         }
-
         body.theme-royal-maroon .leaf-card {
             border: 4px double var(--gold);
             box-shadow: 0 25px 55px rgba(0,0,0,0.85), 0 0 30px rgba(255, 215, 0, 0.4), inset 0 0 30px rgba(0,0,0,0.6);
@@ -83,7 +86,7 @@
         body.theme-sunset-saffron {
             --bg-color: #260b00;
             --bg-gradient: 
-                radial-gradient(circle at 50% 25%, rgba(230, 81, 0, 0.4) 0%, transparent 65%),
+                radial-gradient(circle at 50% 25%, rgba(230, 81, 0, 0.45) 0%, transparent 65%),
                 linear-gradient(180deg, #300d01 0%, #521a02 35%, #752804 65%, #240900 100%);
             --card-bg: linear-gradient(145deg, #571e04 0%, #822e06 50%, #451602 100%);
             --card-border: #ffb703;
@@ -100,8 +103,9 @@
             --shadow-accent: rgba(255, 183, 3, 0.6);
             --door-bg: linear-gradient(145deg, #471501 0%, #1f0700 100%);
             --pillar-color: linear-gradient(90deg, #8a2f04 0%, #ffb703 40%, #fff3b0 55%, #d97706 75%, #471501 100%);
+            --halo-color: radial-gradient(circle, rgba(255, 183, 3, 0.95) 0%, rgba(255, 87, 34, 0.65) 45%, transparent 75%);
+            --font-title: 'Yatra One', 'Tiro Devanagari Marathi', serif;
         }
-
         body.theme-sunset-saffron .leaf-card {
             border: 2px solid #ffb703;
             box-shadow: 0 25px 55px rgba(0,0,0,0.8), 0 0 35px rgba(255, 150, 0, 0.45);
@@ -130,49 +134,99 @@
             --shadow-accent: rgba(179, 130, 26, 0.4);
             --door-bg: linear-gradient(145deg, #3d0606 0%, #170101 100%);
             --pillar-color: linear-gradient(90deg, #d4af37 0%, #fff8db 35%, #b3821a 60%, #fff8db 75%, #8c6710 100%);
+            --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
+            --font-title: 'Tiro Devanagari Marathi', 'Rozha One', serif;
         }
-
         body.theme-temple-ivory .leaf-card {
             border: 2px solid #c99a2c;
             box-shadow: 0 20px 45px rgba(120, 90, 40, 0.25), 0 0 25px rgba(212, 175, 55, 0.3);
         }
-        body.theme-temple-ivory .shlok-header {
-            color: #610d0d !important;
-            text-shadow: 0 2px 8px rgba(255,255,255,0.8);
-        }
-        body.theme-temple-ivory .sub-title {
-            color: #7a1515 !important;
-            text-shadow: none;
-        }
+        body.theme-temple-ivory .shlok-header { color: #610d0d !important; text-shadow: 0 2px 8px rgba(255,255,255,0.8); }
+        body.theme-temple-ivory .sub-title { color: #7a1515 !important; text-shadow: none; }
         body.theme-temple-ivory .venue-address,
         body.theme-temple-ivory .schedule-item,
         body.theme-temple-ivory .pooja-details-box,
         body.theme-temple-ivory .modak-showcase,
         body.theme-temple-ivory .photo-container {
-            background: rgba(255, 255, 255, 0.75) !important;
+            background: rgba(255, 255, 255, 0.8) !important;
             border-color: #c99a2c !important;
             color: #24140b !important;
         }
         body.theme-temple-ivory .pooja-detail-row,
-        body.theme-temple-ivory .schedule-info p {
-            color: #24140b !important;
-        }
+        body.theme-temple-ivory .schedule-info p { color: #24140b !important; }
         body.theme-temple-ivory .pooja-detail-row strong,
-        body.theme-temple-ivory .schedule-info h4 {
-            color: #610d0d !important;
+        body.theme-temple-ivory .schedule-info h4 { color: #610d0d !important; }
+        body.theme-temple-ivory .countdown-box { background: #ffffff !important; border-color: #b3821a !important; }
+        body.theme-temple-ivory .countdown-number { color: #610d0d !important; }
+        body.theme-temple-ivory .countdown-label { color: #73510c !important; }
+        body.theme-temple-ivory .scroll-down-indicator span { color: #610d0d !important; }
+
+        /* --------------------------------------------------------------------------
+           THEME 5: CELESTIAL MIDNIGHT (🌌 दिव्य निळा, तारका व चंद्रप्रभा)
+           -------------------------------------------------------------------------- */
+        body.theme-celestial-midnight {
+            --bg-color: #030814;
+            --bg-gradient: 
+                radial-gradient(circle at 50% 25%, rgba(14, 62, 145, 0.4) 0%, transparent 65%),
+                radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.25) 0%, transparent 50%),
+                linear-gradient(180deg, #050e24 0%, #0a1b42 35%, #10265c 65%, #040917 100%);
+            --card-bg: linear-gradient(145deg, #0b1c42 0%, #132d66 50%, #091738 100%);
+            --card-border: #60a5fa;
+            --card-border-style: solid;
+            --card-radius: 28px;
+            --primary-accent: #2563eb;
+            --gold: #60a5fa;
+            --gold-bright: #93c5fd;
+            --gold-light: #e0f2fe;
+            --gold-dark: #1d4ed8;
+            --text-title: #e0f2fe;
+            --text-body: #ffffff;
+            --text-sub: #bae6fd;
+            --shadow-accent: rgba(96, 165, 250, 0.55);
+            --door-bg: linear-gradient(145deg, #091738 0%, #020712 100%);
+            --pillar-color: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 35%, #e0f2fe 50%, #3b82f6 75%, #0f172a 100%);
+            --halo-color: radial-gradient(circle, rgba(96, 165, 250, 0.9) 0%, rgba(79, 70, 229, 0.6) 50%, transparent 75%);
+            --font-title: 'Arya', 'Rozha One', serif;
         }
-        body.theme-temple-ivory .countdown-box {
-            background: #ffffff !important;
-            border-color: #b3821a !important;
+        body.theme-celestial-midnight .leaf-card {
+            border: 2px solid #60a5fa;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.9), 0 0 35px rgba(96, 165, 250, 0.4), inset 0 0 30px rgba(14, 165, 233, 0.15);
         }
-        body.theme-temple-ivory .countdown-number {
-            color: #610d0d !important;
+        body.theme-celestial-midnight .center-emblem {
+            background: radial-gradient(circle, #0e2759 40%, #020b1c 100%);
+            border-color: #60a5fa;
+            box-shadow: 0 0 40px #60a5fa;
         }
-        body.theme-temple-ivory .countdown-label {
-            color: #73510c !important;
+
+        /* --------------------------------------------------------------------------
+           THEME 6: LOTUS BLUSH (🪷 पवित्र कमळ, गुलाबी व रोझ गोल्ड)
+           -------------------------------------------------------------------------- */
+        body.theme-lotus-blush {
+            --bg-color: #1f0412;
+            --bg-gradient: 
+                radial-gradient(circle at 50% 25%, rgba(225, 29, 120, 0.35) 0%, transparent 65%),
+                linear-gradient(180deg, #2a071a 0%, #450c2c 35%, #5e113c 65%, #1c0310 100%);
+            --card-bg: linear-gradient(145deg, #400928 0%, #61103e 50%, #33051f 100%);
+            --card-border: #f472b6;
+            --card-border-style: solid;
+            --card-radius: 30px;
+            --primary-accent: #db2777;
+            --gold: #f472b6;
+            --gold-bright: #fbcfe8;
+            --gold-light: #fdf2f8;
+            --gold-dark: #be185d;
+            --text-title: #fce7f3;
+            --text-body: #ffffff;
+            --text-sub: #fbcfe8;
+            --shadow-accent: rgba(244, 114, 182, 0.55);
+            --door-bg: linear-gradient(145deg, #3d0524 0%, #15010c 100%);
+            --pillar-color: linear-gradient(90deg, #831843 0%, #f472b6 35%, #fff1f2 50%, #db2777 75%, #4c0519 100%);
+            --halo-color: radial-gradient(circle, rgba(244, 114, 182, 0.9) 0%, rgba(219, 39, 119, 0.6) 50%, transparent 75%);
+            --font-title: 'Gotu', 'Rozha One', serif;
         }
-        body.theme-temple-ivory .scroll-down-indicator span {
-            color: #610d0d !important;
+        body.theme-lotus-blush .leaf-card {
+            border: 2px solid #f472b6;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.85), 0 0 35px rgba(244, 114, 182, 0.4);
         }
 
         /* ==========================================================================
@@ -212,16 +266,18 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.88);
-            backdrop-filter: blur(12px);
-            border: 1.5px solid rgba(255, 215, 0, 0.6);
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(14px);
+            border: 1.5px solid rgba(255, 215, 0, 0.7);
             border-radius: 50px;
-            padding: 6px 12px;
+            padding: 6px 14px;
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(242, 201, 76, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 25px rgba(242, 201, 76, 0.4);
             animation: fadeInPill 1.2s ease;
+            max-width: 95vw;
+            overflow-x: auto;
         }
         @keyframes fadeInPill {
             from { opacity: 0; transform: translate(-50%, 20px); }
@@ -243,13 +299,13 @@
             white-space: nowrap;
         }
         .theme-pill-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.18);
             color: #fff;
         }
         .theme-pill-btn.active {
             background: linear-gradient(135deg, #ffd700, #ff9900);
             color: #000;
-            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 2px 12px rgba(255, 215, 0, 0.6);
         }
 
         /* AUDIO CONTROLLER BUTTON */
@@ -545,7 +601,7 @@
         }
 
         /* ==========================================================================
-           5. TEMPLE MANDAP / MAKHAR (सुवर्ण मंदिर व मखर)
+           5. TEMPLE MANDAP / MAKHAR & ROTATING DIVINE AURA
            ========================================================================== */
         .temple-mandap {
             position: relative;
@@ -623,10 +679,18 @@
             animation: ring-bell 3s ease-in-out infinite alternate;
             transform-origin: top center;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+            cursor: pointer;
+        }
+        .hanging-bell:hover {
+            animation: ring-bell-fast 0.6s infinite alternate;
         }
         @keyframes ring-bell {
             0% { transform: rotate(8deg); }
             100% { transform: rotate(-8deg); }
+        }
+        @keyframes ring-bell-fast {
+            0% { transform: rotate(18deg); }
+            100% { transform: rotate(-18deg); }
         }
 
         .samai-container {
@@ -672,18 +736,25 @@
             display: block;
         }
 
-        .ganesha-3d-wrapper::before {
-            content: '';
+        /* ROTATING DIVINE HALO AURA (सुदर्शन / प्रभावळ) */
+        .divine-halo-wheel {
             position: absolute;
-            top: -15%;
-            left: -15%;
-            width: 130%;
-            height: 130%;
-            background: radial-gradient(circle, rgba(255, 223, 0, 0.75) 0%, rgba(255, 119, 0, 0.4) 45%, transparent 75%);
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: var(--halo-color);
             opacity: 0.85;
-            filter: blur(25px);
+            filter: blur(20px);
             z-index: -1;
-            animation: pulse-aura 3s infinite alternate;
+            animation: rotateHalo 18s linear infinite, pulse-aura 3s infinite alternate;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        @keyframes rotateHalo {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         @keyframes float-3d {
@@ -709,7 +780,7 @@
         }
 
         /* ==========================================================================
-           6. TITLES & COUNTDOWN
+           6. TITLES, SHIMMER & COUNTDOWN
            ========================================================================== */
         .shlok-header {
             font-family: 'Tiro Devanagari Marathi', serif;
@@ -723,13 +794,29 @@
         }
 
         .main-title {
-            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-family: var(--font-title);
             font-size: 3.6rem;
             color: var(--text-title);
             text-align: center;
             line-height: 1.15;
             margin-top: 15px;
             text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 0 0 25px var(--gold-bright);
+            position: relative;
+        }
+
+        /* SHIMMER TEXT GRADIENT EFFECT */
+        .shimmer-text {
+            background: linear-gradient(90deg, var(--gold-light) 0%, #ffffff 25%, var(--gold-bright) 50%, #ffffff 75%, var(--gold-light) 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShimmer 4.5s linear infinite;
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
         }
 
         .sub-title {
@@ -751,6 +838,7 @@
             border-radius: 50px;
             border: 2px solid var(--gold);
             box-shadow: 0 8px 25px rgba(0,0,0,0.6), 0 0 15px var(--shadow-accent);
+            transition: all 0.3s ease;
         }
         .countdown-item {
             text-align: center;
@@ -798,7 +886,7 @@
         }
 
         /* ==========================================================================
-           7. CARDS & CONTENT
+           7. CARDS, STEAM ANIMATION & PARALLAX
            ========================================================================== */
         .section {
             min-height: 85vh;
@@ -859,6 +947,10 @@
             font-size: 1.8rem;
             opacity: 0.9;
             text-shadow: 0 0 10px var(--gold-bright);
+            transition: transform 0.4s ease;
+        }
+        .leaf-card:hover .corner {
+            transform: scale(1.2) rotate(15deg);
         }
         .top-left { top: 14px; left: 18px; }
         .top-right { top: 14px; right: 18px; }
@@ -869,11 +961,12 @@
             font-size: 2.6rem;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 10px var(--gold));
+            animation: pulse-glow 2.5s infinite alternate;
         }
 
         .card-title {
             color: var(--text-title);
-            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-family: var(--font-title);
             font-size: 2.3rem;
             margin-bottom: 20px;
             line-height: 1.3;
@@ -903,7 +996,7 @@
             text-shadow: 0 0 10px var(--shadow-accent);
         }
 
-        /* MODAK HIGHLIGHT BOX */
+        /* MODAK HIGHLIGHT BOX WITH STEAM ANIMATION */
         .modak-showcase {
             display: flex;
             align-items: center;
@@ -915,6 +1008,11 @@
             padding: 16px 22px;
             margin: 22px 0;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px var(--shadow-accent);
+            position: relative;
+        }
+        .modak-thumb-wrapper {
+            position: relative;
+            flex-shrink: 0;
         }
         .modak-thumb-img {
             width: 75px;
@@ -924,8 +1022,24 @@
             object-fit: cover;
             box-shadow: 0 0 20px var(--shadow-accent), 0 6px 15px rgba(0,0,0,0.7);
             animation: modak-bounce 2.8s infinite ease-in-out;
-            flex-shrink: 0;
+            display: block;
         }
+        .steam-bubble {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            opacity: 0.8;
+            animation: riseSteam 2s infinite ease-out;
+            pointer-events: none;
+        }
+        @keyframes riseSteam {
+            0% { transform: translate(-50%, 0) scale(0.8); opacity: 0.8; }
+            50% { transform: translate(-40%, -15px) scale(1.1); opacity: 0.5; }
+            100% { transform: translate(-60%, -30px) scale(1.4); opacity: 0; }
+        }
+
         @keyframes modak-bounce {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-6px) scale(1.05); }
@@ -1016,6 +1130,10 @@
             border-radius: 16px;
             border-left: 5px solid var(--gold-bright);
             border-top: 1px solid rgba(242, 201, 76, 0.2);
+            transition: transform 0.3s ease, border-left-color 0.3s ease;
+        }
+        .schedule-item:hover {
+            transform: translateX(6px);
         }
         .schedule-icon {
             font-size: 1.9rem;
@@ -1138,7 +1256,7 @@
             padding: 30px 20px;
         }
         .footer-quote {
-            font-family: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            font-family: var(--font-title);
             font-size: 2.3rem;
             color: var(--text-title);
             line-height: 1.4;
@@ -1204,15 +1322,17 @@
 </head>
 <body class="theme-banana-leaf" id="appBody">
 
-    <!-- CANVAS FOR FALLING MARIGOLD PETALS & UKADICHE MODAKS -->
+    <!-- CANVAS FOR FALLING FESTIVE PARTICLES & MODAKS -->
     <canvas id="festive-canvas"></canvas>
 
-    <!-- FLOATING THEME SWITCHER BAR -->
+    <!-- FLOATING QUICK THEME SWITCHER BAR -->
     <div class="theme-switcher-pill" id="themeSwitcher">
         <button class="theme-pill-btn active" id="btnThemeBanana" onclick="switchThemeTo('banana-leaf')">🌿 Banana</button>
         <button class="theme-pill-btn" id="btnThemeMaroon" onclick="switchThemeTo('royal-maroon')">👑 Royal</button>
         <button class="theme-pill-btn" id="btnThemeSaffron" onclick="switchThemeTo('sunset-saffron')">🪔 Saffron</button>
         <button class="theme-pill-btn" id="btnThemeIvory" onclick="switchThemeTo('temple-ivory')">🛕 Ivory</button>
+        <button class="theme-pill-btn" id="btnThemeCelestial" onclick="switchThemeTo('celestial-midnight')">🌌 Celestial</button>
+        <button class="theme-pill-btn" id="btnThemeLotus" onclick="switchThemeTo('lotus-blush')">🪷 Lotus</button>
     </div>
 
     <!-- FLOATING MUSIC TOGGLE BUTTON -->
@@ -1285,7 +1405,7 @@
                         <!-- Left Golden Pillar & Bell -->
                         <div class="temple-pillar">
                             <div class="pillar-top"></div>
-                            <div class="hanging-bell">🔔</div>
+                            <div class="hanging-bell" title="घंटा वाजवा">🔔</div>
                             <div class="pillar-base"></div>
                         </div>
 
@@ -1295,8 +1415,9 @@
                             <div style="font-size: 2.2rem;">🪔</div>
                         </div>
 
-                        <!-- 3D Divine Ganesha Idol -->
+                        <!-- 3D Divine Ganesha Idol with Rotating Divine Halo -->
                         <div class="ganesha-3d-wrapper">
+                            <div class="divine-halo-wheel"></div>
                             <img src="ganesh.jpg" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
                         </div>
 
@@ -1309,7 +1430,7 @@
                         <!-- Right Golden Pillar & Bell -->
                         <div class="temple-pillar">
                             <div class="pillar-top"></div>
-                            <div class="hanging-bell">🔔</div>
+                            <div class="hanging-bell" title="घंटा वाजवा">🔔</div>
                             <div class="pillar-base"></div>
                         </div>
                     </div>
@@ -1318,7 +1439,7 @@
                     <div class="temple-base"></div>
                 </div>
 
-                <h1 class="main-title" id="heroTitle">गणपती बाप्पा<br>मोरया!</h1>
+                <h1 class="main-title shimmer-text" id="heroTitle">गणपती बाप्पा<br>मोरया!</h1>
                 <div class="sub-title" id="heroSubTitle">|| श्री गणेशोत्सव २०२६ ||</div>
 
                 <!-- Event Countdown -->
@@ -1364,9 +1485,12 @@
                     बाप्पाच्या कृपेने आमच्या वास्तूत सुख, शांती आणि समृद्धीचा वास राहो. या पावन पर्वावर बाप्पाच्या दर्शनाचा आणि प्रसादाचा लाभ घेण्यासाठी आपण सपरिवार अगत्य उपस्थित राहावे, ही नम्र विनंती.
                 </p>
 
-                <!-- MODAK HIGHLIGHT -->
+                <!-- MODAK HIGHLIGHT WITH STEAM ANIMATION -->
                 <div class="modak-showcase" id="modakShowcase">
-                    <img src="modak.jpg" id="modakImg" alt="उकडीचे मोदक" class="modak-thumb-img">
+                    <div class="modak-thumb-wrapper">
+                        <span class="steam-bubble">♨️</span>
+                        <img src="modak.jpg" id="modakImg" alt="उकडीचे मोदक" class="modak-thumb-img">
+                    </div>
                     <div class="modak-text">
                         <span id="modakTitle" style="font-size: 1.25rem; font-weight: 700; color: var(--gold-light);">गरमागरम उकडीचे मोदक व महाप्रसाद</span>
                         <span id="modakSub">बाप्पाच्या आवडत्या प्रसादाचा आस्वाद घेण्यासाठी सहकुटुंब या!</span>
@@ -1533,15 +1657,16 @@
 
             // Update Theme Switcher Active Button
             document.querySelectorAll('.theme-pill-btn').forEach(btn => btn.classList.remove('active'));
-            if (themeName === 'banana-leaf') document.getElementById('btnThemeBanana').classList.add('active');
-            if (themeName === 'royal-maroon') document.getElementById('btnThemeMaroon').classList.add('active');
-            if (themeName === 'sunset-saffron') document.getElementById('btnThemeSaffron').classList.add('active');
-            if (themeName === 'temple-ivory') document.getElementById('btnThemeIvory').classList.add('active');
+            if (themeName === 'banana-leaf') document.getElementById('btnThemeBanana')?.classList.add('active');
+            if (themeName === 'royal-maroon') document.getElementById('btnThemeMaroon')?.classList.add('active');
+            if (themeName === 'sunset-saffron') document.getElementById('btnThemeSaffron')?.classList.add('active');
+            if (themeName === 'temple-ivory') document.getElementById('btnThemeIvory')?.classList.add('active');
+            if (themeName === 'celestial-midnight') document.getElementById('btnThemeCelestial')?.classList.add('active');
+            if (themeName === 'lotus-blush') document.getElementById('btnThemeLotus')?.classList.add('active');
         }
 
         switchThemeTo(currentActiveTheme);
 
-        // Hide switcher pill if disabled in config
         if (config.features && config.features.enableQuickThemeSwitcher === false) {
             const switcherEl = document.getElementById('themeSwitcher');
             if (switcherEl) switcherEl.style.display = 'none';
@@ -1892,9 +2017,18 @@
             }
         });
 
+        // Interactive Bells in Mandap
+        document.querySelectorAll('.hanging-bell').forEach(bell => {
+            bell.addEventListener('click', () => {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                playTempleBellChime(audioCtx);
+            });
+        });
+
 
         // ====================================================================
-        // 7. FESTIVE PARTICLES: FALLING MARIGOLD PETALS & UKADICHE MODAKS
+        // 7. MULTI-THEME FESTIVE PARTICLE ENGINE
         // ====================================================================
         const canvas = document.getElementById('festive-canvas');
         const ctx = canvas.getContext('2d');
@@ -1907,7 +2041,6 @@
         }, { passive: true });
 
         const particles = [];
-        const petalColors = ['#ff9900', '#ffb700', '#ff5722', '#ffcc00', '#ffd700'];
 
         function drawModak(ctx, size) {
             ctx.beginPath();
@@ -1946,14 +2079,27 @@
             ctx.stroke();
         }
 
-        for (let i = 0; i < 38; i++) {
+        function drawStar(ctx, size) {
+            ctx.fillStyle = '#93c5fd';
+            ctx.shadowBlur = 12;
+            ctx.shadowColor = '#60a5fa';
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * size, -Math.sin((18 + i * 72) * Math.PI / 180) * size);
+                ctx.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * (size * 0.4), -Math.sin((54 + i * 72) * Math.PI / 180) * (size * 0.4));
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+
+        for (let i = 0; i < 42; i++) {
             const isModak = i % 4 === 0;
             particles.push({
                 type: isModak ? 'modak' : 'petal',
                 x: Math.random() * width,
                 y: Math.random() * height - height,
                 size: isModak ? (Math.random() * 6 + 10) : (Math.random() * 8 + 6),
-                color: petalColors[Math.floor(Math.random() * petalColors.length)],
                 speedY: Math.random() * 1.4 + 0.7,
                 speedX: Math.random() * 1.2 - 0.6,
                 angle: Math.random() * 360,
@@ -1974,10 +2120,30 @@
                 if (p.type === 'modak') {
                     drawModak(ctx, p.size);
                 } else {
-                    ctx.fillStyle = (currentActiveTheme === 'royal-maroon' && p.size % 2 === 0) ? '#ff2a4b' : p.color;
-                    ctx.beginPath();
-                    ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
-                    ctx.fill();
+                    if (currentActiveTheme === 'celestial-midnight') {
+                        drawStar(ctx, p.size * 0.8);
+                    } else if (currentActiveTheme === 'lotus-blush') {
+                        ctx.fillStyle = (p.size % 2 === 0) ? '#f472b6' : '#fbcfe8';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, p.size, p.size * 1.7, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else if (currentActiveTheme === 'royal-maroon') {
+                        ctx.fillStyle = (p.size % 2 === 0) ? '#dc2626' : '#ffd700';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else if (currentActiveTheme === 'temple-ivory') {
+                        ctx.fillStyle = (p.size % 2 === 0) ? '#ffffff' : '#fef08a';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, p.size, p.size * 1.5, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else {
+                        // Banana & Sunset Saffron (Marigold / Amber)
+                        ctx.fillStyle = (p.size % 2 === 0) ? '#ff9900' : '#ffb700';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
                 }
 
                 ctx.restore();

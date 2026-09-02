@@ -11,12 +11,14 @@
 
 const INVITATION_CONFIG = {
     // ----------------------------------------------------------------
-    // 🎨 1. THEME & UI STYLE SELECTION (थीम व डिझाइन निवडा)
+    // 🎨 1. THEME & UI STYLE SELECTION (६ आकर्षक थीम्स उपलब्ध)
     // Options: 
-    // - 'banana-leaf'   : 🌿 पारंपारिक केळीचे पान व सोनेरी मखर (Traditional Banana Leaf)
-    // - 'royal-maroon'  : 👑 राजेशाही मखमली मरून व राजवाडा थीम (Royal Palace Velvet & Gold)
-    // - 'sunset-saffron': 🪔 पावन केसरी / महाआरती व दिवे थीम (Auspicious Saffron Glow)
-    // - 'temple-ivory'  : 🛕 पवित्र रेशमी श्वेत व सुवर्ण मंदिर थीम (Sacred Ivory Mandir)
+    // - 'banana-leaf'        : 🌿 पारंपारिक केळीचे पान व सोनेरी मखर (Traditional Banana Leaf)
+    // - 'royal-maroon'       : 👑 राजेशाही मखमली मरून व राजवाडा थीम (Royal Palace Velvet & Gold)
+    // - 'sunset-saffron'     : 🪔 पावन केसरी / महाआरती व दिवे थीम (Auspicious Saffron Glow)
+    // - 'temple-ivory'       : 🛕 पवित्र रेशमी श्वेत व सुवर्ण मंदिर थीम (Sacred Ivory Mandir)
+    // - 'celestial-midnight' : 🌌 दिव्य निळा, तारका व चंद्रप्रभा थीम (Celestial Midnight Star Glow)
+    // - 'lotus-blush'        : 🪷 पवित्र कमळ, गुलाबी व रोझ गोल्ड थीम (Sacred Lotus & Rose Gold)
     // ----------------------------------------------------------------
     theme: 'banana-leaf',
 
@@ -144,7 +146,7 @@ const INVITATION_CONFIG = {
         enableAudioBell: true,
         enablePetalsAndModakShower: true,
         enableCountdown: true,
-        enableQuickThemeSwitcher: true  // Shows floating theme pill to easily preview all 4 themes live
+        enableQuickThemeSwitcher: true  // Shows floating theme pill to easily preview all 6 themes live
     }
 };
 
