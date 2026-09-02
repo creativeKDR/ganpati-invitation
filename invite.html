@@ -15,7 +15,7 @@
 
     <style>
         /* ==========================================================================
-           1. CSS DESIGN SYSTEMS FOR 6 DISTINCT THEMES
+           1. CSS DESIGN SYSTEMS & THEME-SPECIFIC GANESH BORDERS
            ========================================================================== */
         :root {
             /* THEME 1: BANANA LEAF (DEFAULT - केळीचे पान) */
@@ -39,10 +39,13 @@
             --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.85) 0%, rgba(255, 150, 0, 0.5) 45%, transparent 75%);
             --font-title: 'Rozha One', 'Tiro Devanagari Marathi', serif;
             --icon-glow: 0 0 16px rgba(242, 201, 76, 0.8);
+            --ganesh-border: 6px solid #f2c94c;
+            --ganesh-radius: 140px 140px 20px 20px;
+            --ganesh-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 45px rgba(242, 201, 76, 0.45);
         }
 
         /* --------------------------------------------------------------------------
-           THEME 2: ROYAL MAROON (राजेशाही राजवाडा व लाल गुलाब)
+           THEME 2: ROYAL MAROON (राजेशाही राजदरबार व सुवर्ण महिरप)
            -------------------------------------------------------------------------- */
         body.theme-royal-maroon {
             --bg-color: #170101;
@@ -68,22 +71,17 @@
             --halo-color: radial-gradient(circle, rgba(255, 215, 0, 0.9) 0%, rgba(220, 20, 60, 0.6) 50%, transparent 75%);
             --font-title: 'Rozha One', 'Cinzel Decorative', serif;
             --icon-glow: 0 0 18px rgba(255, 215, 0, 0.9), 0 0 30px rgba(220, 38, 38, 0.6);
+            --ganesh-border: 6px double #ffd700;
+            --ganesh-radius: 50% 50% 16px 16px;
+            --ganesh-shadow: 0 25px 55px rgba(0, 0, 0, 0.9), 0 0 45px rgba(255, 215, 0, 0.6), 0 0 15px #dc2626;
         }
         body.theme-royal-maroon .leaf-card {
             border: 4px double var(--gold);
             box-shadow: 0 25px 55px rgba(0,0,0,0.85), 0 0 30px rgba(255, 215, 0, 0.4), inset 0 0 30px rgba(0,0,0,0.6);
         }
-        body.theme-royal-maroon .side-left {
-            background: linear-gradient(90deg, rgba(120, 15, 15, 0.7) 0%, transparent 100%);
-            border-right: 3px solid rgba(255, 215, 0, 0.4);
-        }
-        body.theme-royal-maroon .side-right {
-            background: linear-gradient(-90deg, rgba(120, 15, 15, 0.7) 0%, transparent 100%);
-            border-left: 3px solid rgba(255, 215, 0, 0.4);
-        }
 
         /* --------------------------------------------------------------------------
-           THEME 3: SUNSET SAFFRON (पावन भगवा / महाआरती व सोनेरी दिवे)
+           THEME 3: SUNSET SAFFRON (पावन दीपोत्सव व ज्वलंत महाआरती)
            -------------------------------------------------------------------------- */
         body.theme-sunset-saffron {
             --bg-color: #260b00;
@@ -108,14 +106,13 @@
             --halo-color: radial-gradient(circle, rgba(255, 183, 3, 0.95) 0%, rgba(255, 87, 34, 0.65) 45%, transparent 75%);
             --font-title: 'Yatra One', 'Tiro Devanagari Marathi', serif;
             --icon-glow: 0 0 20px rgba(255, 183, 3, 0.9), 0 0 35px rgba(230, 81, 0, 0.7);
-        }
-        body.theme-sunset-saffron .leaf-card {
-            border: 2px solid #ffb703;
-            box-shadow: 0 25px 55px rgba(0,0,0,0.8), 0 0 35px rgba(255, 150, 0, 0.45);
+            --ganesh-border: 5px solid #ffb703;
+            --ganesh-radius: 130px 130px 30px 30px;
+            --ganesh-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 50px #ff5722, 0 0 30px #ffb703;
         }
 
         /* --------------------------------------------------------------------------
-           THEME 4: TEMPLE IVORY (पवित्र रेशमी श्वेत व चमेली)
+           THEME 4: TEMPLE IVORY (पवित्र संगमरमरी मंदिर व सुवर्ण किनार)
            -------------------------------------------------------------------------- */
         body.theme-temple-ivory {
             --bg-color: #f7f3e8;
@@ -140,10 +137,9 @@
             --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
             --font-title: 'Tiro Devanagari Marathi', 'Rozha One', serif;
             --icon-glow: 0 0 15px rgba(212, 175, 55, 0.7);
-        }
-        body.theme-temple-ivory .leaf-card {
-            border: 2px solid #c99a2c;
-            box-shadow: 0 20px 45px rgba(120, 90, 40, 0.25), 0 0 25px rgba(212, 175, 55, 0.3);
+            --ganesh-border: 6px solid #d4af37;
+            --ganesh-radius: 140px 140px 12px 12px;
+            --ganesh-shadow: 0 20px 45px rgba(120, 90, 40, 0.35), 0 0 35px rgba(212, 175, 55, 0.5);
         }
         body.theme-temple-ivory .shlok-header { color: #610d0d !important; text-shadow: 0 2px 8px rgba(255,255,255,0.8); }
         body.theme-temple-ivory .sub-title { color: #7a1515 !important; text-shadow: none; }
@@ -156,17 +152,9 @@
             border-color: #c99a2c !important;
             color: #24140b !important;
         }
-        body.theme-temple-ivory .pooja-detail-row,
-        body.theme-temple-ivory .schedule-info p { color: #24140b !important; }
-        body.theme-temple-ivory .pooja-detail-row strong,
-        body.theme-temple-ivory .schedule-info h4 { color: #610d0d !important; }
-        body.theme-temple-ivory .countdown-box { background: #ffffff !important; border-color: #b3821a !important; }
-        body.theme-temple-ivory .countdown-number { color: #610d0d !important; }
-        body.theme-temple-ivory .countdown-label { color: #73510c !important; }
-        body.theme-temple-ivory .scroll-down-indicator span { color: #610d0d !important; }
 
         /* --------------------------------------------------------------------------
-           THEME 5: CELESTIAL MIDNIGHT (🌌 दिव्य निळा व तारका)
+           THEME 5: CELESTIAL MIDNIGHT (🌌 दिव्य ब्रह्मांडीय वर्तुळाकार महाद्वार)
            -------------------------------------------------------------------------- */
         body.theme-celestial-midnight {
             --bg-color: #030814;
@@ -189,22 +177,16 @@
             --shadow-accent: rgba(96, 165, 250, 0.55);
             --door-bg: linear-gradient(145deg, #091738 0%, #020712 100%);
             --pillar-color: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 35%, #e0f2fe 50%, #3b82f6 75%, #0f172a 100%);
-            --halo-color: radial-gradient(circle, rgba(96, 165, 250, 0.9) 0%, rgba(79, 70, 229, 0.6) 50%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(96, 165, 250, 0.95) 0%, rgba(79, 70, 229, 0.6) 50%, transparent 75%);
             --font-title: 'Arya', 'Rozha One', serif;
             --icon-glow: 0 0 20px rgba(96, 165, 250, 0.9), 0 0 35px rgba(56, 189, 248, 0.7);
-        }
-        body.theme-celestial-midnight .leaf-card {
-            border: 2px solid #60a5fa;
-            box-shadow: 0 25px 55px rgba(0,0,0,0.9), 0 0 35px rgba(96, 165, 250, 0.4), inset 0 0 30px rgba(14, 165, 233, 0.15);
-        }
-        body.theme-celestial-midnight .center-emblem {
-            background: radial-gradient(circle, #0e2759 40%, #020b1c 100%);
-            border-color: #60a5fa;
-            box-shadow: 0 0 40px #60a5fa;
+            --ganesh-border: 4.5px solid #60a5fa;
+            --ganesh-radius: 50%;
+            --ganesh-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 45px #3b82f6, 0 0 70px rgba(96, 165, 250, 0.6);
         }
 
         /* --------------------------------------------------------------------------
-           THEME 6: LOTUS BLUSH (🪷 पवित्र कमळ व गुलाबी)
+           THEME 6: LOTUS BLUSH (🪷 पवित्र कमळ पुष्प व रोझ गोल्ड)
            -------------------------------------------------------------------------- */
         body.theme-lotus-blush {
             --bg-color: #1f0412;
@@ -229,10 +211,9 @@
             --halo-color: radial-gradient(circle, rgba(244, 114, 182, 0.9) 0%, rgba(219, 39, 119, 0.6) 50%, transparent 75%);
             --font-title: 'Gotu', 'Rozha One', serif;
             --icon-glow: 0 0 20px rgba(244, 114, 182, 0.9), 0 0 35px rgba(219, 39, 119, 0.6);
-        }
-        body.theme-lotus-blush .leaf-card {
-            border: 2px solid #f472b6;
-            box-shadow: 0 25px 55px rgba(0,0,0,0.85), 0 0 35px rgba(244, 114, 182, 0.4);
+            --ganesh-border: 5px solid #f472b6;
+            --ganesh-radius: 140px 140px 40px 40px;
+            --ganesh-shadow: 0 25px 50px rgba(0, 0, 0, 0.85), 0 0 45px #ec4899, 0 0 30px rgba(244, 114, 182, 0.4);
         }
 
         /* ==========================================================================
@@ -254,7 +235,6 @@
             transition: background-color 0.5s ease;
         }
 
-        /* BACKGROUND CANVAS */
         #festive-canvas {
             position: fixed;
             top: 0;
@@ -602,7 +582,7 @@
         }
 
         /* ==========================================================================
-           5. TEMPLE MANDAP / MAKHAR & ROTATING DIVINE AURA
+           5. TEMPLE MANDAP, THEME PILLARS & GANESH IMAGE BORDER
            ========================================================================== */
         .temple-mandap {
             position: relative;
@@ -613,6 +593,7 @@
             flex-direction: column;
             align-items: center;
             transform-style: preserve-3d;
+            transition: all 0.5s ease;
         }
 
         .temple-shikhar {
@@ -643,6 +624,7 @@
             background: linear-gradient(180deg, rgba(242, 201, 76, 0.25) 0%, transparent 100%);
             box-shadow: 0 0 20px rgba(242, 201, 76, 0.4);
             position: relative;
+            transition: all 0.4s ease;
         }
 
         .mandap-frame {
@@ -666,6 +648,7 @@
             padding: 10px 0;
             z-index: 12;
             position: relative;
+            transition: background 0.5s ease;
         }
         .pillar-top, .pillar-base {
             width: 38px;
@@ -675,14 +658,16 @@
             border: 1px solid #fff;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
-        .hanging-bell {
-            font-size: 1.4rem;
+        
+        .hanging-decor {
+            font-size: 1.5rem;
             animation: ring-bell 3s ease-in-out infinite alternate;
             transform-origin: top center;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        .hanging-bell:hover {
+        .hanging-decor:hover {
             animation: ring-bell-fast 0.6s infinite alternate;
         }
         @keyframes ring-bell {
@@ -710,6 +695,11 @@
             animation: flame-flicker 1.5s infinite alternate ease-in-out;
             filter: drop-shadow(0 0 10px #ffaa00) drop-shadow(0 0 20px #ff5500);
         }
+        .diya-icon {
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 12px var(--gold));
+            transition: transform 0.3s ease;
+        }
         @keyframes flame-flicker {
             0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
             50% { transform: scale(1.15) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 15px #ffcc00) drop-shadow(0 0 25px #ff7700); }
@@ -728,13 +718,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 140px 140px 20px 20px;
-            border: 6px solid var(--gold);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.7), 
-                0 0 45px var(--shadow-accent),
-                inset 0 0 20px rgba(0,0,0,0.6);
+            border-radius: var(--ganesh-radius);
+            border: var(--ganesh-border);
+            box-shadow: var(--ganesh-shadow);
             display: block;
+            transition: all 0.5s ease;
         }
 
         /* ROTATING DIVINE HALO AURA (सुदर्शन / प्रभावळ) */
@@ -751,6 +739,7 @@
             animation: rotateHalo 18s linear infinite, pulse-aura 3s infinite alternate;
             border-radius: 50%;
             pointer-events: none;
+            transition: background 0.5s ease;
         }
 
         @keyframes rotateHalo {
@@ -1403,51 +1392,51 @@
                     निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
                 </div>
 
-                <!-- GRAND DECORATIVE TEMPLE MANDAP (मखर) -->
-                <div class="temple-mandap">
+                <!-- GRAND DECORATIVE TEMPLE MANDAP (मखर / महाद्वार) -->
+                <div class="temple-mandap" id="templeMandap">
                     <!-- Top Shikhar & Kalash -->
-                    <div class="temple-shikhar">
-                        <div class="temple-kalash">🪔 🕉️ 🪔</div>
-                        <div class="temple-arch-top"></div>
+                    <div class="temple-shikhar" id="mandapTop">
+                        <div class="temple-kalash" id="mandapKalash">🪔 🕉️ 🪔</div>
+                        <div class="temple-arch-top" id="mandapArch"></div>
                     </div>
 
                     <!-- Mandap Frame with Pillars and Ganpati Idol -->
-                    <div class="mandap-frame">
-                        <!-- Left Golden Pillar & Bell -->
-                        <div class="temple-pillar">
+                    <div class="mandap-frame" id="mandapFrame">
+                        <!-- Left Golden Pillar & Decor -->
+                        <div class="temple-pillar" id="pillarLeft">
                             <div class="pillar-top"></div>
-                            <div class="hanging-bell" title="घंटा वाजवा">🔔</div>
+                            <div class="hanging-decor" id="decorLeft" title="घंटा वाजवा">🔔</div>
                             <div class="pillar-base"></div>
                         </div>
 
                         <!-- Left Brass Diya Samai -->
-                        <div class="samai-container samai-left">
-                            <div class="diya-flame">🔥</div>
-                            <div style="font-size: 2.2rem;">🪔</div>
+                        <div class="samai-container samai-left" id="samaiLeft">
+                            <div class="diya-flame" id="flameLeft">🔥</div>
+                            <div class="diya-icon" id="diyaIconLeft">🪔</div>
                         </div>
 
-                        <!-- 3D Divine Ganesha Idol with Rotating Divine Halo -->
-                        <div class="ganesha-3d-wrapper">
-                            <div class="divine-halo-wheel"></div>
+                        <!-- 3D Divine Ganesha Idol with Theme Border & Rotating Aura -->
+                        <div class="ganesha-3d-wrapper" id="ganeshaWrapper">
+                            <div class="divine-halo-wheel" id="divineHalo"></div>
                             <img src="ganesh.jpg" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
                         </div>
 
                         <!-- Right Brass Diya Samai -->
-                        <div class="samai-container samai-right">
-                            <div class="diya-flame">🔥</div>
-                            <div style="font-size: 2.2rem;">🪔</div>
+                        <div class="samai-container samai-right" id="samaiRight">
+                            <div class="diya-flame" id="flameRight">🔥</div>
+                            <div class="diya-icon" id="diyaIconRight">🪔</div>
                         </div>
 
-                        <!-- Right Golden Pillar & Bell -->
-                        <div class="temple-pillar">
+                        <!-- Right Golden Pillar & Decor -->
+                        <div class="temple-pillar" id="pillarRight">
                             <div class="pillar-top"></div>
-                            <div class="hanging-bell" title="घंटा वाजवा">🔔</div>
+                            <div class="hanging-decor" id="decorRight" title="घंटा वाजवा">🔔</div>
                             <div class="pillar-base"></div>
                         </div>
                     </div>
 
                     <!-- Temple Base Asan -->
-                    <div class="temple-base"></div>
+                    <div class="temple-base" id="mandapBase"></div>
                 </div>
 
                 <h1 class="main-title shimmer-text" id="heroTitle">गणपती बाप्पा<br>मोरया!</h1>
@@ -1655,14 +1644,14 @@
     <!-- JAVASCRIPT TEMPLATE RENDERER, 3D DOORS, AUDIO & PARTICLES -->
     <script>
         // ====================================================================
-        // 1. DYNAMIC THEME APPLIER & FLORAL TORAN SYSTEM
+        // 1. DYNAMIC THEME APPLIER, MANDAP DECOR & FLORAL TORAN SYSTEM
         // ====================================================================
         const config = window.INVITATION_CONFIG || {};
 
         const urlParams = new URLSearchParams(window.location.search);
         let currentActiveTheme = urlParams.get('theme') || config.theme || 'banana-leaf';
 
-        // Custom theme configurations for floral torans, icons and symbols
+        // Custom theme configurations for floral torans, icons, mandap and diyas
         const THEME_DATA = {
             'banana-leaf': {
                 leaf: '🍃',
@@ -1670,7 +1659,10 @@
                 corner: 'ॐ',
                 msgIcon: '🌿',
                 scheduleIcon: '🌺',
-                emblem: '卐'
+                emblem: '卐',
+                kalash: '🪔 🕉️ 🪔',
+                decor: '🔔',
+                diya: '🪔'
             },
             'royal-maroon': {
                 leaf: '⚜️',
@@ -1678,7 +1670,10 @@
                 corner: '⚜️',
                 msgIcon: '👑',
                 scheduleIcon: '🌹',
-                emblem: '👑'
+                emblem: '👑',
+                kalash: '👑 ⚜️ 👑',
+                decor: '⚜️',
+                diya: '🏮'
             },
             'sunset-saffron': {
                 leaf: '✨',
@@ -1686,7 +1681,10 @@
                 corner: '🪔',
                 msgIcon: '🪔',
                 scheduleIcon: '🔥',
-                emblem: '☀️'
+                emblem: '☀️',
+                kalash: '☀️ 🪔 ☀️',
+                decor: '🪔',
+                diya: '🪔'
             },
             'temple-ivory': {
                 leaf: '🌿',
@@ -1694,7 +1692,10 @@
                 corner: '🛕',
                 msgIcon: '🌸',
                 scheduleIcon: '🏵️',
-                emblem: 'ॐ'
+                emblem: 'ॐ',
+                kalash: '🛕 🌸 🛕',
+                decor: '🌸',
+                diya: '🪔'
             },
             'celestial-midnight': {
                 leaf: '✦',
@@ -1702,7 +1703,10 @@
                 corner: '✦',
                 msgIcon: '🌌',
                 scheduleIcon: '⭐',
-                emblem: '🌙'
+                emblem: '🌙',
+                kalash: '⭐ 🌙 ⭐',
+                decor: '⭐',
+                diya: '💎'
             },
             'lotus-blush': {
                 leaf: '🌸',
@@ -1710,7 +1714,10 @@
                 corner: '🪷',
                 msgIcon: '🪷',
                 scheduleIcon: '🌺',
-                emblem: '🪷'
+                emblem: '🪷',
+                kalash: '🪷 💖 🪷',
+                decor: '🪷',
+                diya: '🪷'
             }
         };
 
@@ -1745,7 +1752,7 @@
                 sym.textContent = tData.corner;
             });
 
-            // Update Header Icon
+            // Update Header & Mandap Icons
             const msgIconEl = document.getElementById('msgIcon');
             if (msgIconEl) msgIconEl.textContent = tData.msgIcon;
 
@@ -1754,6 +1761,20 @@
 
             const emblemIconEl = document.getElementById('centerEmblemIcon');
             if (emblemIconEl) emblemIconEl.textContent = tData.emblem;
+
+            // Update Mandap Kalash, Pillar Decors & Diyas
+            const kalashEl = document.getElementById('mandapKalash');
+            if (kalashEl) kalashEl.textContent = tData.kalash;
+
+            const decorLeft = document.getElementById('decorLeft');
+            const decorRight = document.getElementById('decorRight');
+            if (decorLeft) decorLeft.textContent = tData.decor;
+            if (decorRight) decorRight.textContent = tData.decor;
+
+            const diyaLeft = document.getElementById('diyaIconLeft');
+            const diyaRight = document.getElementById('diyaIconRight');
+            if (diyaLeft) diyaLeft.textContent = tData.diya;
+            if (diyaRight) diyaRight.textContent = tData.diya;
         }
 
         switchThemeTo(currentActiveTheme);
@@ -2108,9 +2129,9 @@
             }
         });
 
-        // Interactive Bells in Mandap
-        document.querySelectorAll('.hanging-bell').forEach(bell => {
-            bell.addEventListener('click', () => {
+        // Interactive Bells & Hanging Decors
+        document.querySelectorAll('.hanging-decor').forEach(item => {
+            item.addEventListener('click', () => {
                 if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
                 if (audioCtx.state === 'suspended') audioCtx.resume();
                 playTempleBellChime(audioCtx);
