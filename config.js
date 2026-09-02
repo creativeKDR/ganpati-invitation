@@ -114,7 +114,7 @@ const INVITATION_CONFIG = {
     // 🖼️ 9. IMAGE ASSETS (फोटो फाईल्स)
     // ----------------------------------------------------------------
     images: {
-        ganeshIdol: "ganesh.jpg",
+        ganeshIdol: "ganesh.png",
         familyPhoto: "family.jpg",
         poojaThali: "pooja.jpg",
         modakPhoto: "modak.jpg",

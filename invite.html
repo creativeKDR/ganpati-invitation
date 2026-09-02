@@ -15,7 +15,7 @@
 
     <style>
         /* ==========================================================================
-           1. CSS DESIGN SYSTEMS & THEME-SPECIFIC GANESH ARCH & BORDERS
+           1. CSS DESIGN SYSTEMS & THEME VARIABLES
            ========================================================================== */
         :root {
             /* THEME 1: BANANA LEAF (DEFAULT - केळीचे पान) */
@@ -35,8 +35,7 @@
             --text-sub: #dcedc8;
             --shadow-accent: rgba(242, 201, 76, 0.45);
             --door-bg: linear-gradient(145deg, #420808 0%, #1a0202 100%);
-            --pillar-color: linear-gradient(90deg, #996515 0%, #ffd700 45%, #fff3b0 55%, #b8860b 80%, #684200 100%);
-            --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.85) 0%, rgba(255, 150, 0, 0.5) 45%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.9) 0%, rgba(255, 150, 0, 0.55) 45%, transparent 75%);
             --font-title: 'Rozha One', 'Tiro Devanagari Marathi', serif;
             --icon-glow: 0 0 16px rgba(242, 201, 76, 0.8);
             --arch-filter: drop-shadow(0 15px 25px rgba(0,0,0,0.85)) drop-shadow(0 0 25px rgba(242, 201, 76, 0.6));
@@ -65,8 +64,7 @@
             --text-sub: #ffcccc;
             --shadow-accent: rgba(255, 215, 0, 0.55);
             --door-bg: linear-gradient(145deg, #420404 0%, #1a0101 100%);
-            --pillar-color: linear-gradient(90deg, #6e0c0c 0%, #ffd700 35%, #fff6cc 50%, #c69214 75%, #420606 100%);
-            --halo-color: radial-gradient(circle, rgba(255, 215, 0, 0.9) 0%, rgba(220, 20, 60, 0.6) 50%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(255, 215, 0, 0.95) 0%, rgba(220, 20, 60, 0.65) 50%, transparent 75%);
             --font-title: 'Rozha One', 'Cinzel Decorative', serif;
             --icon-glow: 0 0 18px rgba(255, 215, 0, 0.9), 0 0 30px rgba(220, 38, 38, 0.6);
             --arch-filter: drop-shadow(0 15px 30px rgba(0,0,0,0.95)) drop-shadow(0 0 30px rgba(255, 215, 0, 0.7)) drop-shadow(0 0 15px #dc2626);
@@ -98,7 +96,6 @@
             --text-sub: #ffdec2;
             --shadow-accent: rgba(255, 183, 3, 0.6);
             --door-bg: linear-gradient(145deg, #471501 0%, #1f0700 100%);
-            --pillar-color: linear-gradient(90deg, #8a2f04 0%, #ffb703 40%, #fff3b0 55%, #d97706 75%, #471501 100%);
             --halo-color: radial-gradient(circle, rgba(255, 183, 3, 0.95) 0%, rgba(255, 87, 34, 0.65) 45%, transparent 75%);
             --font-title: 'Yatra One', 'Tiro Devanagari Marathi', serif;
             --icon-glow: 0 0 20px rgba(255, 183, 3, 0.9), 0 0 35px rgba(230, 81, 0, 0.7);
@@ -127,8 +124,7 @@
             --text-sub: #5c3b24;
             --shadow-accent: rgba(179, 130, 26, 0.4);
             --door-bg: linear-gradient(145deg, #3d0606 0%, #170101 100%);
-            --pillar-color: linear-gradient(90deg, #d4af37 0%, #fff8db 35%, #b3821a 60%, #fff8db 75%, #8c6710 100%);
-            --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
+            --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.85) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
             --font-title: 'Tiro Devanagari Marathi', 'Rozha One', serif;
             --icon-glow: 0 0 15px rgba(212, 175, 55, 0.7);
             --arch-filter: drop-shadow(0 15px 25px rgba(120, 90, 40, 0.35)) drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
@@ -168,7 +164,6 @@
             --text-sub: #bae6fd;
             --shadow-accent: rgba(96, 165, 250, 0.55);
             --door-bg: linear-gradient(145deg, #091738 0%, #020712 100%);
-            --pillar-color: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 35%, #e0f2fe 50%, #3b82f6 75%, #0f172a 100%);
             --halo-color: radial-gradient(circle, rgba(96, 165, 250, 0.95) 0%, rgba(79, 70, 229, 0.6) 50%, transparent 75%);
             --font-title: 'Arya', 'Rozha One', serif;
             --icon-glow: 0 0 20px rgba(96, 165, 250, 0.9), 0 0 35px rgba(56, 189, 248, 0.7);
@@ -197,7 +192,6 @@
             --text-sub: #fbcfe8;
             --shadow-accent: rgba(244, 114, 182, 0.55);
             --door-bg: linear-gradient(145deg, #3d0524 0%, #15010c 100%);
-            --pillar-color: linear-gradient(90deg, #831843 0%, #f472b6 35%, #fff1f2 50%, #db2777 75%, #4c0519 100%);
             --halo-color: radial-gradient(circle, rgba(244, 114, 182, 0.9) 0%, rgba(219, 39, 119, 0.6) 50%, transparent 75%);
             --font-title: 'Gotu', 'Rozha One', serif;
             --icon-glow: 0 0 20px rgba(244, 114, 182, 0.9), 0 0 35px rgba(219, 39, 119, 0.6);
@@ -570,17 +564,16 @@
         }
 
         /* ==========================================================================
-           5. ORNATE TEMPLE MANDAP, PRABHAVALI ARCH & GANPATI BAPPA
+           5. ORNATE TEMPLE MANDAP, PRABHAVALI ARCH & STEADY GANESHA SHRINE
            ========================================================================== */
         .temple-mandap {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 620px;
             margin: 15px auto 20px auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transform-style: preserve-3d;
             transition: all 0.5s ease;
         }
 
@@ -589,63 +582,58 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            padding: 0 10px;
         }
 
-        .temple-pillar {
-            width: 26px;
-            height: 400px;
-            background: var(--pillar-color);
-            border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 15px var(--shadow-accent);
+        /* HANGING BRASS BELLS (GHANTA WITH CHAIN) */
+        .ghanta-wrapper {
+            position: relative;
+            width: 75px;
+            height: 290px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            z-index: 12;
-            position: relative;
-            transition: background 0.5s ease;
-        }
-        .pillar-top, .pillar-base {
-            width: 36px;
-            height: 18px;
-            background: linear-gradient(135deg, var(--gold-bright), var(--gold-dark));
-            border-radius: 4px;
-            border: 1px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        
-        .hanging-decor {
-            font-size: 1.5rem;
-            animation: ring-bell 3s ease-in-out infinite alternate;
-            transform-origin: top center;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+            z-index: 15;
             cursor: pointer;
+            transform-origin: top center;
+            animation: swingGhanta 3.2s ease-in-out infinite alternate;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.85)) drop-shadow(0 0 14px var(--shadow-accent));
             transition: transform 0.3s ease;
         }
-        .hanging-decor:hover {
-            animation: ring-bell-fast 0.6s infinite alternate;
+        .ghanta-right {
+            animation-duration: 3.7s;
+            animation-delay: -1.5s;
         }
-        @keyframes ring-bell {
+        .ghanta-wrapper:hover, .ghanta-wrapper.ringing {
+            animation: ringGhantaFast 0.5s ease-in-out infinite alternate;
+        }
+        .hanging-bell-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        @keyframes swingGhanta {
             0% { transform: rotate(8deg); }
             100% { transform: rotate(-8deg); }
         }
-        @keyframes ring-bell-fast {
-            0% { transform: rotate(18deg); }
-            100% { transform: rotate(-18deg); }
+        @keyframes ringGhantaFast {
+            0% { transform: rotate(20deg); }
+            100% { transform: rotate(-20deg); }
         }
 
         .samai-container {
             position: absolute;
-            bottom: 10px;
-            z-index: 15;
+            bottom: 5px;
+            z-index: 16;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .samai-left { left: -10px; }
-        .samai-right { right: -10px; }
+        .samai-left { left: 75px; }
+        .samai-right { right: 75px; }
 
         .diya-flame {
             font-size: 1.8rem;
@@ -663,32 +651,31 @@
             100% { transform: scale(0.95) rotate(-1deg); opacity: 0.92; }
         }
 
-        /* 3D GANESHA SHRINE WITH ORNATE PRABHAVALI TEMPLE ARCH OVERLAY */
+        /* 3D GANESHA SHRINE (STEADY & STABLE) */
         .ganesha-3d-wrapper {
             position: relative;
-            width: 320px;
-            height: 420px;
-            margin: 0 10px;
-            animation: float-3d 6s infinite ease-in-out;
+            width: 330px;
+            height: 450px;
+            margin: 0 auto;
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
+            /* STEADY & STABLE: No floating animation */
         }
 
-        /* The Ganesha Photo nestled inside the arch */
+        /* The Transparent Cutout Ganesha Idol */
         .ganesha-img {
             position: absolute;
-            width: 58%;
-            height: 58%;
-            top: 28%;
-            left: 21%;
-            object-fit: cover;
-            border-radius: 90px 90px 16px 16px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95), inset 0 0 25px rgba(0,0,0,0.8);
+            width: 66%;
+            height: 66%;
+            top: 24%;
+            left: 17%;
+            object-fit: contain;
             z-index: 2;
-            border: 2px solid rgba(255, 215, 0, 0.6);
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.95)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
             display: block;
+            pointer-events: none;
             transition: all 0.5s ease;
         }
 
@@ -706,7 +693,7 @@
             transition: all 0.5s ease;
         }
 
-        /* ROTATING DIVINE HALO AURA (सुदर्शन प्रभावळ) */
+        /* ROTATING DIVINE HALO AURA (सुदर्शन प्रभावळ - ANIMATED BEHIND STEADY GANESHA) */
         .divine-halo-wheel {
             position: absolute;
             top: -15%;
@@ -714,7 +701,7 @@
             width: 130%;
             height: 130%;
             background: var(--halo-color);
-            opacity: 0.85;
+            opacity: 0.88;
             filter: blur(20px);
             z-index: 1;
             animation: rotateHalo 18s linear infinite, pulse-aura 3s infinite alternate;
@@ -726,12 +713,6 @@
         @keyframes rotateHalo {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-        }
-
-        @keyframes float-3d {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(0.8deg); }
-            100% { transform: translateY(0) rotate(0deg); }
         }
         @keyframes pulse-aura {
             0% { transform: scale(0.95); opacity: 0.7; }
@@ -1295,9 +1276,8 @@
             .card-title { font-size: 1.85rem; }
             .text-large { font-size: 1.25rem; }
             .text-medium { font-size: 1.1rem; }
-            .ganesha-3d-wrapper { width: 270px; height: 360px; margin: 0 6px; }
-            .temple-pillar { width: 18px; height: 340px; }
-            .pillar-top, .pillar-base { width: 26px; }
+            .ganesha-3d-wrapper { width: 280px; height: 380px; }
+            .ghanta-wrapper { width: 50px; height: 210px; }
             .samai-container { display: none; }
             .section { padding: 50px 15px; min-height: 75vh; }
             .door-hint-title { font-size: 1.8rem; }
@@ -1375,13 +1355,12 @@
 
                 <!-- GRAND DECORATIVE TEMPLE MANDAP (मखर / महाद्वार) -->
                 <div class="temple-mandap" id="templeMandap">
-                    <!-- Mandap Frame with Pillars and Ganpati Idol -->
+                    <!-- Mandap Frame with Hanging Ghanta Bells, Diyas, and Steady Ganesha Shrine -->
                     <div class="mandap-frame" id="mandapFrame">
-                        <!-- Left Golden Pillar & Decor -->
-                        <div class="temple-pillar" id="pillarLeft">
-                            <div class="pillar-top"></div>
-                            <div class="hanging-decor" id="decorLeft" title="घंटा वाजवा">🔔</div>
-                            <div class="pillar-base"></div>
+                        
+                        <!-- Left Hanging Brass Ghanta Bell with Chain -->
+                        <div class="ghanta-wrapper ghanta-left" id="ghantaLeft" title="घंटा वाजवा (Ring Bell)">
+                            <img src="bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
                         </div>
 
                         <!-- Left Brass Diya Samai -->
@@ -1390,11 +1369,13 @@
                             <div class="diya-icon" id="diyaIconLeft">🪔</div>
                         </div>
 
-                        <!-- 3D Divine Ganesha Idol Enshrined in Ornate Prabhavali Arch -->
+                        <!-- 3D Divine Ganesha Shrine (Steady & Stable) -->
                         <div class="ganesha-3d-wrapper" id="ganeshaWrapper">
+                            <!-- Rotating Divine Halo (Animated) -->
                             <div class="divine-halo-wheel" id="divineHalo"></div>
-                            <img src="ganesh.jpg" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
-                            <!-- High-Res Transparent Prabhavali Temple Arch Overlay -->
+                            <!-- Transparent Cutout Lord Ganesha Idol (Steady & Stable) -->
+                            <img src="ganesh.png" id="ganeshImg" alt="श्री गणेश मूर्ती" class="ganesha-img">
+                            <!-- High-Res Transparent Prabhavali Temple Arch Overlay (Steady & Stable) -->
                             <img src="temple_arch.png" id="templeArchOverlay" alt="मंदिर प्रभावळ मखर" class="prabhavali-arch-overlay">
                         </div>
 
@@ -1404,11 +1385,9 @@
                             <div class="diya-icon" id="diyaIconRight">🪔</div>
                         </div>
 
-                        <!-- Right Golden Pillar & Decor -->
-                        <div class="temple-pillar" id="pillarRight">
-                            <div class="pillar-top"></div>
-                            <div class="hanging-decor" id="decorRight" title="घंटा वाजवा">🔔</div>
-                            <div class="pillar-base"></div>
+                        <!-- Right Hanging Brass Ghanta Bell with Chain -->
+                        <div class="ghanta-wrapper ghanta-right" id="ghantaRight" title="घंटा वाजवा (Ring Bell)">
+                            <img src="bell.png" alt="मंदिराची घंटा" class="hanging-bell-img">
                         </div>
                     </div>
 
@@ -1628,7 +1607,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         let currentActiveTheme = urlParams.get('theme') || config.theme || 'banana-leaf';
 
-        // Custom theme configurations for floral torans, icons, mandap and arch overlays
+        // Custom theme configurations for floral torans, icons, and arch overlays
         const THEME_DATA = {
             'banana-leaf': {
                 leaf: '🍃',
@@ -1637,7 +1616,6 @@
                 msgIcon: '🌿',
                 scheduleIcon: '🌺',
                 emblem: '卐',
-                decor: '🔔',
                 diya: '🪔',
                 archImg: 'temple_arch.png'
             },
@@ -1648,7 +1626,6 @@
                 msgIcon: '👑',
                 scheduleIcon: '🌹',
                 emblem: '👑',
-                decor: '⚜️',
                 diya: '🏮',
                 archImg: 'temple_arch_royal.png'
             },
@@ -1659,7 +1636,6 @@
                 msgIcon: '🪔',
                 scheduleIcon: '🔥',
                 emblem: '☀️',
-                decor: '🪔',
                 diya: '🪔',
                 archImg: 'temple_arch.png'
             },
@@ -1670,7 +1646,6 @@
                 msgIcon: '🌸',
                 scheduleIcon: '🏵️',
                 emblem: 'ॐ',
-                decor: '🌸',
                 diya: '🪔',
                 archImg: 'temple_arch_ivory.png'
             },
@@ -1681,7 +1656,6 @@
                 msgIcon: '🌌',
                 scheduleIcon: '⭐',
                 emblem: '🌙',
-                decor: '⭐',
                 diya: '💎',
                 archImg: 'temple_arch_celestial.png'
             },
@@ -1692,7 +1666,6 @@
                 msgIcon: '🪷',
                 scheduleIcon: '🌺',
                 emblem: '🪷',
-                decor: '🪷',
                 diya: '🪷',
                 archImg: 'temple_arch_lotus.png'
             }
@@ -1739,12 +1712,7 @@
             const emblemIconEl = document.getElementById('centerEmblemIcon');
             if (emblemIconEl) emblemIconEl.textContent = tData.emblem;
 
-            // Update Mandap Pillar Decors & Diyas
-            const decorLeft = document.getElementById('decorLeft');
-            const decorRight = document.getElementById('decorRight');
-            if (decorLeft) decorLeft.textContent = tData.decor;
-            if (decorRight) decorRight.textContent = tData.decor;
-
+            // Update Diyas
             const diyaLeft = document.getElementById('diyaIconLeft');
             const diyaRight = document.getElementById('diyaIconRight');
             if (diyaLeft) diyaLeft.textContent = tData.diya;
@@ -2109,14 +2077,23 @@
             }
         });
 
-        // Interactive Bells & Hanging Decors
-        document.querySelectorAll('.hanging-decor').forEach(item => {
-            item.addEventListener('click', () => {
-                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                if (audioCtx.state === 'suspended') audioCtx.resume();
-                playTempleBellChime(audioCtx);
+        // Interactive Hanging Brass Ghanta Bells
+        function attachBellListeners() {
+            const bells = [document.getElementById('ghantaLeft'), document.getElementById('ghantaRight')];
+            bells.forEach(bell => {
+                if (bell) {
+                    bell.addEventListener('click', () => {
+                        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                        if (audioCtx.state === 'suspended') audioCtx.resume();
+                        playTempleBellChime(audioCtx);
+
+                        bell.classList.add('ringing');
+                        setTimeout(() => bell.classList.remove('ringing'), 2200);
+                    });
+                }
             });
-        });
+        }
+        attachBellListeners();
 
 
         // ====================================================================
