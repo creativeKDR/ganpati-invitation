@@ -38,10 +38,11 @@
             --pillar-color: linear-gradient(90deg, #996515 0%, #ffd700 45%, #fff3b0 55%, #b8860b 80%, #684200 100%);
             --halo-color: radial-gradient(circle, rgba(255, 223, 0, 0.85) 0%, rgba(255, 150, 0, 0.5) 45%, transparent 75%);
             --font-title: 'Rozha One', 'Tiro Devanagari Marathi', serif;
+            --icon-glow: 0 0 16px rgba(242, 201, 76, 0.8);
         }
 
         /* --------------------------------------------------------------------------
-           THEME 2: ROYAL MAROON (राजेशाही राजवाडा व सुवर्ण महिरप)
+           THEME 2: ROYAL MAROON (राजेशाही राजवाडा व लाल गुलाब)
            -------------------------------------------------------------------------- */
         body.theme-royal-maroon {
             --bg-color: #170101;
@@ -66,6 +67,7 @@
             --pillar-color: linear-gradient(90deg, #6e0c0c 0%, #ffd700 35%, #fff6cc 50%, #c69214 75%, #420606 100%);
             --halo-color: radial-gradient(circle, rgba(255, 215, 0, 0.9) 0%, rgba(220, 20, 60, 0.6) 50%, transparent 75%);
             --font-title: 'Rozha One', 'Cinzel Decorative', serif;
+            --icon-glow: 0 0 18px rgba(255, 215, 0, 0.9), 0 0 30px rgba(220, 38, 38, 0.6);
         }
         body.theme-royal-maroon .leaf-card {
             border: 4px double var(--gold);
@@ -81,7 +83,7 @@
         }
 
         /* --------------------------------------------------------------------------
-           THEME 3: SUNSET SAFFRON (पावन भगवा / महाआरती व दिवे)
+           THEME 3: SUNSET SAFFRON (पावन भगवा / महाआरती व सोनेरी दिवे)
            -------------------------------------------------------------------------- */
         body.theme-sunset-saffron {
             --bg-color: #260b00;
@@ -105,6 +107,7 @@
             --pillar-color: linear-gradient(90deg, #8a2f04 0%, #ffb703 40%, #fff3b0 55%, #d97706 75%, #471501 100%);
             --halo-color: radial-gradient(circle, rgba(255, 183, 3, 0.95) 0%, rgba(255, 87, 34, 0.65) 45%, transparent 75%);
             --font-title: 'Yatra One', 'Tiro Devanagari Marathi', serif;
+            --icon-glow: 0 0 20px rgba(255, 183, 3, 0.9), 0 0 35px rgba(230, 81, 0, 0.7);
         }
         body.theme-sunset-saffron .leaf-card {
             border: 2px solid #ffb703;
@@ -112,7 +115,7 @@
         }
 
         /* --------------------------------------------------------------------------
-           THEME 4: TEMPLE IVORY (पवित्र रेशमी श्वेत, संगमरमर व सुवर्ण)
+           THEME 4: TEMPLE IVORY (पवित्र रेशमी श्वेत व चमेली)
            -------------------------------------------------------------------------- */
         body.theme-temple-ivory {
             --bg-color: #f7f3e8;
@@ -136,6 +139,7 @@
             --pillar-color: linear-gradient(90deg, #d4af37 0%, #fff8db 35%, #b3821a 60%, #fff8db 75%, #8c6710 100%);
             --halo-color: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 248, 220, 0.5) 50%, transparent 75%);
             --font-title: 'Tiro Devanagari Marathi', 'Rozha One', serif;
+            --icon-glow: 0 0 15px rgba(212, 175, 55, 0.7);
         }
         body.theme-temple-ivory .leaf-card {
             border: 2px solid #c99a2c;
@@ -148,7 +152,7 @@
         body.theme-temple-ivory .pooja-details-box,
         body.theme-temple-ivory .modak-showcase,
         body.theme-temple-ivory .photo-container {
-            background: rgba(255, 255, 255, 0.8) !important;
+            background: rgba(255, 255, 255, 0.85) !important;
             border-color: #c99a2c !important;
             color: #24140b !important;
         }
@@ -162,7 +166,7 @@
         body.theme-temple-ivory .scroll-down-indicator span { color: #610d0d !important; }
 
         /* --------------------------------------------------------------------------
-           THEME 5: CELESTIAL MIDNIGHT (🌌 दिव्य निळा, तारका व चंद्रप्रभा)
+           THEME 5: CELESTIAL MIDNIGHT (🌌 दिव्य निळा व तारका)
            -------------------------------------------------------------------------- */
         body.theme-celestial-midnight {
             --bg-color: #030814;
@@ -187,6 +191,7 @@
             --pillar-color: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 35%, #e0f2fe 50%, #3b82f6 75%, #0f172a 100%);
             --halo-color: radial-gradient(circle, rgba(96, 165, 250, 0.9) 0%, rgba(79, 70, 229, 0.6) 50%, transparent 75%);
             --font-title: 'Arya', 'Rozha One', serif;
+            --icon-glow: 0 0 20px rgba(96, 165, 250, 0.9), 0 0 35px rgba(56, 189, 248, 0.7);
         }
         body.theme-celestial-midnight .leaf-card {
             border: 2px solid #60a5fa;
@@ -199,7 +204,7 @@
         }
 
         /* --------------------------------------------------------------------------
-           THEME 6: LOTUS BLUSH (🪷 पवित्र कमळ, गुलाबी व रोझ गोल्ड)
+           THEME 6: LOTUS BLUSH (🪷 पवित्र कमळ व गुलाबी)
            -------------------------------------------------------------------------- */
         body.theme-lotus-blush {
             --bg-color: #1f0412;
@@ -223,6 +228,7 @@
             --pillar-color: linear-gradient(90deg, #831843 0%, #f472b6 35%, #fff1f2 50%, #db2777 75%, #4c0519 100%);
             --halo-color: radial-gradient(circle, rgba(244, 114, 182, 0.9) 0%, rgba(219, 39, 119, 0.6) 50%, transparent 75%);
             --font-title: 'Gotu', 'Rozha One', serif;
+            --icon-glow: 0 0 20px rgba(244, 114, 182, 0.9), 0 0 35px rgba(219, 39, 119, 0.6);
         }
         body.theme-lotus-blush .leaf-card {
             border: 2px solid #f472b6;
@@ -547,7 +553,7 @@
             border-left: 2px dashed rgba(242, 201, 76, 0.2);
         }
 
-        /* HANGING FLOWER TORAN */
+        /* DYNAMIC FLORAL TORAN BANNER */
         .toran-banner {
             position: absolute;
             top: 0;
@@ -584,15 +590,10 @@
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
         }
         .toran-flower {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #ffb300 40%, #ff5722 100%);
-            box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-            margin-top: -6px;
-        }
-        .toran-flower.yellow {
-            background: radial-gradient(circle, #fff176 40%, #fbc02d 100%);
+            font-size: 1.6rem;
+            line-height: 1;
+            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
+            margin-top: -4px;
         }
 
         @keyframes swing-toran {
@@ -780,7 +781,7 @@
         }
 
         /* ==========================================================================
-           6. TITLES, SHIMMER & COUNTDOWN
+           6. TITLES, SHIMMER & SPARKLES
            ========================================================================== */
         .shlok-header {
             font-family: 'Tiro Devanagari Marathi', serif;
@@ -886,7 +887,7 @@
         }
 
         /* ==========================================================================
-           7. CARDS, STEAM ANIMATION & PARALLAX
+           7. CARDS, SPARKLES & ICONS STYLING
            ========================================================================== */
         .section {
             min-height: 85vh;
@@ -941,28 +942,37 @@
             box-shadow: 0 30px 65px rgba(0,0,0,0.7), 0 0 35px var(--shadow-accent);
         }
 
+        /* SPARKLE BADGE ON CARD HEADER */
+        .card-header-icon {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            filter: var(--icon-glow);
+            animation: iconFloat 3s infinite ease-in-out;
+            position: relative;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.1); filter: var(--icon-glow) drop-shadow(0 0 25px var(--gold-bright)); }
+        }
+
+        /* CORNER EMBELLISHMENTS */
         .corner {
             position: absolute;
             color: var(--gold-bright);
             font-size: 1.8rem;
             opacity: 0.9;
-            text-shadow: 0 0 10px var(--gold-bright);
+            text-shadow: 0 0 12px var(--gold-bright);
             transition: transform 0.4s ease;
         }
         .leaf-card:hover .corner {
-            transform: scale(1.2) rotate(15deg);
+            transform: scale(1.25) rotate(15deg);
         }
         .top-left { top: 14px; left: 18px; }
         .top-right { top: 14px; right: 18px; }
         .bottom-left { bottom: 14px; left: 18px; }
         .bottom-right { bottom: 14px; right: 18px; }
-
-        .card-header-icon {
-            font-size: 2.6rem;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 0 10px var(--gold));
-            animation: pulse-glow 2.5s infinite alternate;
-        }
 
         .card-title {
             color: var(--text-title);
@@ -996,7 +1006,7 @@
             text-shadow: 0 0 10px var(--shadow-accent);
         }
 
-        /* MODAK HIGHLIGHT BOX WITH STEAM ANIMATION */
+        /* MODAK HIGHLIGHT BOX WITH STEAM ANIMATION & SPARKLES */
         .modak-showcase {
             display: flex;
             align-items: center;
@@ -1007,7 +1017,7 @@
             border-radius: 20px;
             padding: 16px 22px;
             margin: 22px 0;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px var(--shadow-accent);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 20px var(--shadow-accent);
             position: relative;
         }
         .modak-thumb-wrapper {
@@ -1020,7 +1030,7 @@
             border-radius: 50%;
             border: 2.5px solid var(--gold-bright);
             object-fit: cover;
-            box-shadow: 0 0 20px var(--shadow-accent), 0 6px 15px rgba(0,0,0,0.7);
+            box-shadow: 0 0 22px var(--shadow-accent), 0 6px 15px rgba(0,0,0,0.7);
             animation: modak-bounce 2.8s infinite ease-in-out;
             display: block;
         }
@@ -1113,7 +1123,7 @@
             margin-top: 8px;
         }
 
-        /* SCHEDULE TIMELINE */
+        /* SCHEDULE TIMELINE WITH SPARKLE ICONS */
         .schedule-list {
             margin: 20px 0;
             text-align: left;
@@ -1130,14 +1140,21 @@
             border-radius: 16px;
             border-left: 5px solid var(--gold-bright);
             border-top: 1px solid rgba(242, 201, 76, 0.2);
-            transition: transform 0.3s ease, border-left-color 0.3s ease;
+            transition: transform 0.3s ease, border-left-color 0.3s ease, box-shadow 0.3s ease;
         }
         .schedule-item:hover {
             transform: translateX(6px);
+            box-shadow: 0 4px 15px var(--shadow-accent);
         }
         .schedule-icon {
-            font-size: 1.9rem;
+            font-size: 2rem;
             line-height: 1;
+            filter: drop-shadow(0 0 10px var(--gold));
+            animation: iconPulse 2.5s infinite alternate;
+        }
+        @keyframes iconPulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15) rotate(5deg); }
         }
         .schedule-info h4 {
             font-size: 1.3rem;
@@ -1354,8 +1371,8 @@
         </div>
         
         <!-- Center Emblem -->
-        <div class="center-emblem">
-            <div class="center-emblem-icon">卐</div>
+        <div class="center-emblem" id="centerEmblem">
+            <div class="center-emblem-icon" id="centerEmblemIcon">卐</div>
             <div class="center-emblem-text">शुभ लाभ</div>
         </div>
 
@@ -1371,16 +1388,10 @@
     <!-- 2. MAIN INVITATION WRAPPER -->
     <div class="invite-wrapper" id="mainInvite">
         
-        <!-- Hanging Toran -->
-        <div class="toran-banner">
-            <div class="toran-garland">
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower yellow"></span></div>
-                <div class="toran-cluster"><span class="toran-leaf">🍃</span><span class="toran-flower"></span></div>
+        <!-- Hanging Toran with Dynamic Theme Flowers -->
+        <div class="toran-banner" id="toranBanner">
+            <div class="toran-garland" id="toranGarland">
+                <!-- Dynamically populated based on active theme -->
             </div>
         </div>
 
@@ -1470,12 +1481,12 @@
         <!-- SECTION 1: INVITATION MESSAGE -->
         <section class="section" id="message-section">
             <div class="scroll-reveal leaf-card">
-                <div class="corner top-left">ॐ</div>
-                <div class="corner top-right">ॐ</div>
-                <div class="corner bottom-left">ॐ</div>
-                <div class="corner bottom-right">ॐ</div>
+                <div class="corner top-left corner-symbol">ॐ</div>
+                <div class="corner top-right corner-symbol">ॐ</div>
+                <div class="corner bottom-left corner-symbol">ॐ</div>
+                <div class="corner bottom-right corner-symbol">ॐ</div>
 
-                <div class="card-header-icon">🌿</div>
+                <div class="card-header-icon" id="msgIcon">🌿</div>
                 <h2 class="card-title" id="msgTitle">सप्रेम निमंत्रण</h2>
                 
                 <p class="text-large" id="msgLead">
@@ -1502,10 +1513,10 @@
         <!-- SECTION 2: FAMILY DETAILS -->
         <section class="section" id="family-section">
             <div class="scroll-reveal leaf-card">
-                <div class="corner top-left">❀</div>
-                <div class="corner top-right">❀</div>
-                <div class="corner bottom-left">❀</div>
-                <div class="corner bottom-right">❀</div>
+                <div class="corner top-left corner-symbol">❀</div>
+                <div class="corner top-right corner-symbol">❀</div>
+                <div class="corner bottom-left corner-symbol">❀</div>
+                <div class="corner bottom-right corner-symbol">❀</div>
 
                 <h2 class="card-title" id="familyCardTitle">निमंत्रक परिवार</h2>
 
@@ -1529,12 +1540,12 @@
         <!-- SECTION 3: UTSAV SCHEDULE -->
         <section class="section" id="schedule-section">
             <div class="scroll-reveal leaf-card">
-                <div class="corner top-left">❋</div>
-                <div class="corner top-right">❋</div>
-                <div class="corner bottom-left">❋</div>
-                <div class="corner bottom-right">❋</div>
+                <div class="corner top-left corner-symbol">❋</div>
+                <div class="corner top-right corner-symbol">❋</div>
+                <div class="corner bottom-left corner-symbol">❋</div>
+                <div class="corner bottom-right corner-symbol">❋</div>
 
-                <div class="card-header-icon">🌺</div>
+                <div class="card-header-icon" id="scheduleHeaderIcon">🌺</div>
                 <h2 class="card-title">कार्यक्रमाची रूपरेषा</h2>
 
                 <div class="schedule-list" id="scheduleList">
@@ -1550,10 +1561,10 @@
         <!-- SECTION 4: SATYANARAYANA POOJA SPECIAL SECTION -->
         <section class="section" id="pooja-section">
             <div class="scroll-reveal leaf-card pooja-card">
-                <div class="corner top-left" style="color: var(--gold-light);">❋</div>
-                <div class="corner top-right" style="color: var(--gold-light);">❋</div>
-                <div class="corner bottom-left" style="color: var(--gold-light);">❋</div>
-                <div class="corner bottom-right" style="color: var(--gold-light);">❋</div>
+                <div class="corner top-left corner-symbol" style="color: var(--gold-light);">❋</div>
+                <div class="corner top-right corner-symbol" style="color: var(--gold-light);">❋</div>
+                <div class="corner bottom-left corner-symbol" style="color: var(--gold-light);">❋</div>
+                <div class="corner bottom-right corner-symbol" style="color: var(--gold-light);">❋</div>
                 
                 <img src="pooja.jpg" id="poojaImg" alt="पूजा थाळी" class="pooja-img">
                 
@@ -1587,11 +1598,12 @@
         <!-- SECTION 5: VENUE & GOOGLE MAPS -->
         <section class="section" id="venue-section">
             <div class="scroll-reveal leaf-card">
-                <div class="corner top-left">📍</div>
-                <div class="corner top-right">📍</div>
-                <div class="corner bottom-left">📍</div>
-                <div class="corner bottom-right">📍</div>
+                <div class="corner top-left corner-symbol">📍</div>
+                <div class="corner top-right corner-symbol">📍</div>
+                <div class="corner bottom-left corner-symbol">📍</div>
+                <div class="corner bottom-right corner-symbol">📍</div>
 
+                <div class="card-header-icon" id="venueIcon">📍</div>
                 <h2 class="card-title" id="venueTitle">पत्ता व स्थळ</h2>
                 
                 <div class="venue-address" id="venueAddress">
@@ -1643,12 +1655,64 @@
     <!-- JAVASCRIPT TEMPLATE RENDERER, 3D DOORS, AUDIO & PARTICLES -->
     <script>
         // ====================================================================
-        // 1. DYNAMIC CONFIGURATION LOADER & THEME APPLIER
+        // 1. DYNAMIC THEME APPLIER & FLORAL TORAN SYSTEM
         // ====================================================================
         const config = window.INVITATION_CONFIG || {};
 
         const urlParams = new URLSearchParams(window.location.search);
         let currentActiveTheme = urlParams.get('theme') || config.theme || 'banana-leaf';
+
+        // Custom theme configurations for floral torans, icons and symbols
+        const THEME_DATA = {
+            'banana-leaf': {
+                leaf: '🍃',
+                flowers: ['🌼', '🏵️', '🌼', '🏵️', '🌼', '🏵️', '🌼'],
+                corner: 'ॐ',
+                msgIcon: '🌿',
+                scheduleIcon: '🌺',
+                emblem: '卐'
+            },
+            'royal-maroon': {
+                leaf: '⚜️',
+                flowers: ['🌹', '👑', '🌹', '⚜️', '🌹', '👑', '🌹'],
+                corner: '⚜️',
+                msgIcon: '👑',
+                scheduleIcon: '🌹',
+                emblem: '👑'
+            },
+            'sunset-saffron': {
+                leaf: '✨',
+                flowers: ['🪔', '🌼', '🪔', '🏵️', '🪔', '🌼', '🪔'],
+                corner: '🪔',
+                msgIcon: '🪔',
+                scheduleIcon: '🔥',
+                emblem: '☀️'
+            },
+            'temple-ivory': {
+                leaf: '🌿',
+                flowers: ['🌸', '🤍', '🌸', '🪷', '🌸', '🤍', '🌸'],
+                corner: '🛕',
+                msgIcon: '🌸',
+                scheduleIcon: '🏵️',
+                emblem: 'ॐ'
+            },
+            'celestial-midnight': {
+                leaf: '✦',
+                flowers: ['⭐', '💫', '🌙', '✨', '⭐', '💫', '⭐'],
+                corner: '✦',
+                msgIcon: '🌌',
+                scheduleIcon: '⭐',
+                emblem: '🌙'
+            },
+            'lotus-blush': {
+                leaf: '🌸',
+                flowers: ['🪷', '🌺', '🪷', '💖', '🪷', '🌺', '🪷'],
+                corner: '🪷',
+                msgIcon: '🪷',
+                scheduleIcon: '🌺',
+                emblem: '🪷'
+            }
+        };
 
         function switchThemeTo(themeName) {
             currentActiveTheme = themeName;
@@ -1663,6 +1727,33 @@
             if (themeName === 'temple-ivory') document.getElementById('btnThemeIvory')?.classList.add('active');
             if (themeName === 'celestial-midnight') document.getElementById('btnThemeCelestial')?.classList.add('active');
             if (themeName === 'lotus-blush') document.getElementById('btnThemeLotus')?.classList.add('active');
+
+            // Update Toran Flowers dynamically
+            const tData = THEME_DATA[themeName] || THEME_DATA['banana-leaf'];
+            const garlandEl = document.getElementById('toranGarland');
+            if (garlandEl) {
+                garlandEl.innerHTML = tData.flowers.map(f => `
+                    <div class="toran-cluster">
+                        <span class="toran-leaf">${tData.leaf}</span>
+                        <span class="toran-flower">${f}</span>
+                    </div>
+                `).join('');
+            }
+
+            // Update Card Corner Symbols
+            document.querySelectorAll('.corner-symbol').forEach(sym => {
+                sym.textContent = tData.corner;
+            });
+
+            // Update Header Icon
+            const msgIconEl = document.getElementById('msgIcon');
+            if (msgIconEl) msgIconEl.textContent = tData.msgIcon;
+
+            const schedIconEl = document.getElementById('scheduleHeaderIcon');
+            if (schedIconEl) schedIconEl.textContent = tData.scheduleIcon;
+
+            const emblemIconEl = document.getElementById('centerEmblemIcon');
+            if (emblemIconEl) emblemIconEl.textContent = tData.emblem;
         }
 
         switchThemeTo(currentActiveTheme);
@@ -2028,7 +2119,7 @@
 
 
         // ====================================================================
-        // 7. MULTI-THEME FESTIVE PARTICLE ENGINE
+        // 7. MULTI-THEME FESTIVE PARTICLE & SPARKLE ENGINE
         // ====================================================================
         const canvas = document.getElementById('festive-canvas');
         const ctx = canvas.getContext('2d');
@@ -2079,10 +2170,10 @@
             ctx.stroke();
         }
 
-        function drawStar(ctx, size) {
-            ctx.fillStyle = '#93c5fd';
-            ctx.shadowBlur = 12;
-            ctx.shadowColor = '#60a5fa';
+        function drawStar(ctx, size, color) {
+            ctx.fillStyle = color || '#93c5fd';
+            ctx.shadowBlur = 14;
+            ctx.shadowColor = color || '#60a5fa';
             ctx.beginPath();
             for (let i = 0; i < 5; i++) {
                 ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * size, -Math.sin((18 + i * 72) * Math.PI / 180) * size);
@@ -2091,6 +2182,16 @@
             ctx.closePath();
             ctx.fill();
             ctx.shadowBlur = 0;
+        }
+
+        function drawFlowerPetal(ctx, size, color1, color2) {
+            const grad = ctx.createRadialGradient(0, 0, 1, 0, 0, size * 1.5);
+            grad.addColorStop(0, color1);
+            grad.addColorStop(1, color2);
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, size * 0.75, size * 1.6, 0, 0, Math.PI * 2);
+            ctx.fill();
         }
 
         for (let i = 0; i < 42; i++) {
@@ -2121,28 +2222,22 @@
                     drawModak(ctx, p.size);
                 } else {
                     if (currentActiveTheme === 'celestial-midnight') {
-                        drawStar(ctx, p.size * 0.8);
+                        drawStar(ctx, p.size * 0.85, (p.size % 2 === 0) ? '#93c5fd' : '#fde047');
                     } else if (currentActiveTheme === 'lotus-blush') {
-                        ctx.fillStyle = (p.size % 2 === 0) ? '#f472b6' : '#fbcfe8';
-                        ctx.beginPath();
-                        ctx.ellipse(0, 0, p.size, p.size * 1.7, 0, 0, Math.PI * 2);
-                        ctx.fill();
+                        drawFlowerPetal(ctx, p.size, '#fbcfe8', '#db2777');
                     } else if (currentActiveTheme === 'royal-maroon') {
-                        ctx.fillStyle = (p.size % 2 === 0) ? '#dc2626' : '#ffd700';
-                        ctx.beginPath();
-                        ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
-                        ctx.fill();
+                        if (p.size % 2 === 0) {
+                            drawFlowerPetal(ctx, p.size, '#f87171', '#991b1b');
+                        } else {
+                            drawStar(ctx, p.size * 0.6, '#ffd700');
+                        }
                     } else if (currentActiveTheme === 'temple-ivory') {
-                        ctx.fillStyle = (p.size % 2 === 0) ? '#ffffff' : '#fef08a';
-                        ctx.beginPath();
-                        ctx.ellipse(0, 0, p.size, p.size * 1.5, 0, 0, Math.PI * 2);
-                        ctx.fill();
+                        drawFlowerPetal(ctx, p.size, '#ffffff', '#fef08a');
+                    } else if (currentActiveTheme === 'sunset-saffron') {
+                        drawFlowerPetal(ctx, p.size, '#fef08a', '#ea580c');
                     } else {
-                        // Banana & Sunset Saffron (Marigold / Amber)
-                        ctx.fillStyle = (p.size % 2 === 0) ? '#ff9900' : '#ffb700';
-                        ctx.beginPath();
-                        ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, Math.PI * 2);
-                        ctx.fill();
+                        // Banana Leaf: Vibrant yellow-orange marigold
+                        drawFlowerPetal(ctx, p.size, '#fde047', '#f97316');
                     }
                 }
 
