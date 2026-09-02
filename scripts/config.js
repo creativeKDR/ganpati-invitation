@@ -126,7 +126,8 @@ const INVITATION_CONFIG = {
     // ----------------------------------------------------------------
     audio: {
         enableMusic: true,             // Enable background devotional aarti
-        audioFile: "audio/aarti.mp3",  // Audio path
+        audioFile: "audio/aarti.mp3",  // Audio path for aarti
+        bellAudioFile: "audio/bell.mp3", // Audio path for temple ghanta bell chime
         volume: 0.75,                  // Volume from 0.1 to 1.0
         loop: true,                    // Loop continuously
         autoPlayOnOpen: true           // Automatically play when user taps to open doors
